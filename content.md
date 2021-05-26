@@ -70,7 +70,7 @@ count: false
 
 ## Vorgehen Datenbereitstellung
 
-1. OCR-Workflow
+1. OCR-D-Workflow (manuell optimiert je Werk)
 2. Extraktion von .xslx-Dateien
    - 1 Datei pro Seite
    - 1 Zeile pro Textzeile
@@ -88,7 +88,7 @@ count: false
 - automatische Ersetzung bestimmter Muster zur Bereinigung von
   * häufigen Flüchtigkeitsfehlern
   * systematischen Abweichungen (wie Konventionen zu Interpunktion)
-- Erhöhung der Ausbeute, Vermeidung von Unterrepräsentation
+- zur Erhöhung der Ausbeute, Vermeidung von Unterrepräsentation
 - abhängig vom Material (ohne/mit/gemischt `aͤ oͤ uͤ `, `ſ`, `ß`, `⸗`, `,` …)
 
 - Beispiele:
@@ -100,13 +100,31 @@ count: false
 ## Ergebnisse Datenbereitstellung
 
 - Umfang (vorläufig):
-  * 18 Bearbeiter
-  * 20 Werke à ?? Zeilen (vollständig) → ?? (vorausgewählt) → ?? (korrigiert) → ?? (übereinstimmend)
-  * CER OCR ...
+  * 18 Bearbeiter, ~200 Emails
+  * 16 Werke, 10 mit Double-Keying
+  * → 6473 Seiten (vollständig)
+  * → 477 " (vorausgewählt)
+  * → 199317 Zeilen (vollständig)
+  * → 20808 " (vorausgewählt)
+  * → 14909 " (korrigiert)
+  * → 13335 " (übereinstimmend)
+- Inter-Annotator-Agreement
+  * 89% Zeilen (Ausbeute Double-Keying)
+  * 99.7% Zeichen (= 0.3% CER)
+- Genauigkeit der Baseline-OCR
+  * 97.2% Zeichen (= 2.8% CER)
+  * 98.8% Zeichen (= 1.2% CER): nur Fraktur (`GT4HistOCR+frk+Fraktur`)
+  * 96.2% Zeichen (= 3.8% CER): nur Antiqua (`deu+Latin`)
 
 ---
 
 ## Ergebnisse Training
+
+- werkspezifisches Finetuning
+- generisches Finetuning (nur Fraktur)
+- generisches Finetuning (nur Antiqua)
+- generisches Finetuning (alles)
+- generisches Baseline-Training (alles)
 
 | **Werk** | **CER vorher** | **CER nachher** |
 | --- | --- | --- |
