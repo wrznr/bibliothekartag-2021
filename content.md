@@ -92,10 +92,11 @@ count: false
   * systematischen Abweichungen (wie Konventionen zu Interpunktion)
 - Erhöhung der Ausbeute, Vermeidung von Unterrepräsentation
 - abhängig vom Material (ohne/mit `aͤ`, `oͤ`, `uͤ`, `ſ`, `ß`, `⸗`, `,` …) <!-- oder gemischt -->
-- Beispiele:
+- Beispiele:  
+   
   | `r" ⸗ "` → `"⸗"` &nbsp; `r"ä"` → `"aͤ"` &nbsp; `r"[=-]$"` → `"⸗"` | `r" /"` → `"/"` &nbsp; `r"/(?=\S)"` → `"/ "` |
   | --- | --- |
-  | ![Beispielbild Loskiel](./img/FILE_0007_GT_Page1_Block3_Page1_Block3_line0003.bin.png) | ![Beispielbild Ryff](./img/FILE_0408_GT_Page1_Block1_Page1_Block1_line0023.bin.png)   |
+  | ![Beispielbild Loskiel](./img/FILE_0007_GT_Page1_Block3_Page1_Block3_line0003.bin.png) | ![Beispielbild Ryff](./img/FILE_0408_GT_Page1_Block1_Page1_Block1_line0023.bin.png) |
   | "Bruͤder<u> = </u>Unit<u>ä</u>t iſt die unter die Indianer in" | "bel<u> </u>/ Knoblauch<u> </u>/ Senff<u> </u>/ Eſſig<u> </u>/ Saltz vñ" |
 
 ---
@@ -122,8 +123,10 @@ count: false
   * 99.7% Zeichen (= 0.3% CER)
 - Genauigkeit der Baseline-OCR
   * 97.2% Zeichen (= 2.8% CER)
-  * 98.8% Zeichen (= 1.2% CER): nur Fraktur (`GT4HistOCR+frk+Fraktur`)
-  * 96.2% Zeichen (= 3.8% CER): nur Antiqua (`deu+Latin`)
+  * 98.8% Zeichen (= 1.2% CER):  
+    nur Fraktur (`GT4HistOCR+frk+Fraktur`)
+  * 96.2% Zeichen (= 3.8% CER):  
+    nur Antiqua (`deu+Latin`)
 
 ]
 
