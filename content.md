@@ -10,7 +10,7 @@ layout: true
       <td style="text-align:right"><a href="https://www.slub-dresden.de/">www.slub-dresden.de</a></td>
     </tr>
     <tr>
-      <td style="text-align:right">Referat 2.5</td>
+      <td style="text-align:right">Referate 4.3 & 2.5</td>
       <td />
     </tr>
   </table>
@@ -20,15 +20,17 @@ layout: true
   <table>
     <tr>
       <td style="text-align:left"><b>Kay-Michael Würzner</b></td>
+      <td style="text-align:left"><b>Robert Sachunsky</b></td>
     </tr>
     <tr>
-      <td style="text-align:left">Referat 2.5</td>
+      <td style="text-align:left">Referat Open Science</td>
+      <td style="text-align:left">Referat Digitale Objekte</td>
     </tr>
     <tr>
-      <td style="font-size:8pt"><b>Date</b></td>
+      <td style="font-size:8pt"><b>17. Juni 2021</b></td>
     </tr>
     <tr>
-      <td style="font-size:8pt">Event</td>
+      <td style="font-size:8pt">109. Bibliothekartag</td>
     </tr>
   </table>
 </div>
@@ -92,22 +94,34 @@ count: false
 - abhängig vom Material (ohne/mit/gemischt `aͤ oͤ uͤ `, `ſ`, `ß`, `⸗`, `,` …)
 
 - Beispiele:
-  * `r" ⸗ "→"⸗"` `r"ä"→"aͤ"` `r"[=-]$"→"⸗"` (Beispielbild loskiel ...)
-  * `r" /"→"/"` `r"/(?=\S)"→"/ "` (Beispielbild ryff ...)
+  * `r" ⸗ "→"⸗"` `r"ä"→"aͤ"` `r"[=-]$"→"⸗"`  
+    ![Beispielbild Loskiel](./img/FILE_0007_GT_Page1_Block3_Page1_Block3_line0003.bin.png)  
+    <tt>Bruͤder<u> = </u>Unit<u>ä</u>t iſt die unter die Indianer in</tt>
+  * `r" /"→"/"` `r"/(?=\S)"→"/ "`  
+    ![Beispielbild Ryff](./img/FILE_0408_GT_Page1_Block1_Page1_Block1_line0023.bin.png)
+    <tt>bel<u> </u>/ Knoblauch<u> </u>/ Senff<u> </u>/ Eſſig<u> </u>/ Saltz vñ</tt>
 
 ---
 
 ## Ergebnisse Datenbereitstellung
 
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr style="vertical-align:top">
+    <td>
+      
 - Umfang (vorläufig):
   * 18 Bearbeiter, ~200 Emails
   * 16 Werke, 10 mit Double-Keying
   * → 6473 Seiten (vollständig)
-  * → 477 " (vorausgewählt)
   * → 199317 Zeilen (vollständig)
-  * → 20808 " (vorausgewählt)
-  * → 14909 " (korrigiert)
-  * → 13335 " (übereinstimmend)
+  * → 477 Seiten (vorausgewählt)
+  * → 20808 Zeilen (vorausgewählt)
+  * → 14909 Zeilen (korrigiert)
+  * → 13335 Zeilen (übereinstimmend)
+    
+  </td>
+    <td>
+      
 - Inter-Annotator-Agreement
   * 89% Zeilen (Ausbeute Double-Keying)
   * 99.7% Zeichen (= 0.3% CER)
@@ -115,6 +129,11 @@ count: false
   * 97.2% Zeichen (= 2.8% CER)
   * 98.8% Zeichen (= 1.2% CER): nur Fraktur (`GT4HistOCR+frk+Fraktur`)
   * 96.2% Zeichen (= 3.8% CER): nur Antiqua (`deu+Latin`)
+
+    </td>
+  </tr>
+</table>
+
 
 ---
 
@@ -137,8 +156,8 @@ count: false
 
 class: part-slide
 
-# Many thanks for your attention!
+# Vielen Dank für Ihre Aufmerksamkeit!
 
 <center>
-<a href="https://wrznr.github.io/slide-template/">wrznr.github.io/slide-template</a>
+<a href="https://wrznr.github.io/bibliothekartag-2021">wrznr.github.io/bibliothekartag-2021</a>
 </center>
