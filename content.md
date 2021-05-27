@@ -85,26 +85,26 @@ count: false
 
 ---
 
-#### Textnormalisierung
+### Textnormalisierung
 
 - automatische Ersetzung bestimmter Muster zur Bereinigung von
   * häufigen Flüchtigkeitsfehlern
   * systematischen Abweichungen (wie Konventionen zu Interpunktion)
 - Erhöhung der Ausbeute, Vermeidung von Unterrepräsentation
-- abhängig vom Material (ohne/mit "aͤ", "oͤ", "uͤ", "ſ", "ß", "⸗", "," …) <!-- oder gemischt -->
+- abhängig vom Material (ohne/mit `aͤ`, `oͤ`, `uͤ`, `ſ`, `ß`, `⸗`, `,` …) <!-- oder gemischt -->
 - Beispiele:
-  * `r" ⸗ "` → `"⸗"` `r"ä"` → `"`aͤ`"` `r"[=-]$"` → `"⸗"`  
+  * `r" ⸗ "` → `"⸗"`  `r"ä"` → `"aͤ"`   `r"[=-]$"` → `"⸗"`  
     ![Beispielbild Loskiel](./img/FILE_0007_GT_Page1_Block3_Page1_Block3_line0003.bin.png)  
     "Bruͤder<u> = </u>Unit<u>ä</u>t iſt die unter die Indianer in"
-  * `r" /"` → `"/"` `r"/(?=\S)"` → `"/ "`  
-    ![Beispielbild Ryff](./img/FILE_0408_GT_Page1_Block1_Page1_Block1_line0023.bin.png)
+  * `r" /"` → `"/"`    `r"/(?=\S)"` → `"/ "`  
+    ![Beispielbild Ryff](./img/FILE_0408_GT_Page1_Block1_Page1_Block1_line0023.bin.png)  
     "bel<u> </u>/ Knoblauch<u> </u>/ Senff<u> </u>/ Eſſig<u> </u>/ Saltz vñ"
 
 ---
 
 ### Ergebnisse Datenbereitstellung
 
-<div class="cols"><div class="fifty" markdown="1">
+<span style="display:block" class="cols"><span style="display:block" class="fifty">
      
 - Umfang (vorläufig):
   * 18 Bearbeiter, ~200 Emails
@@ -116,8 +116,9 @@ count: false
   * → 14909 Zeilen (korrigiert)
   * → 13335 Zeilen (übereinstimmend)
     
-</div>
-<div class="fifty" markdown="1">
+</span>
+<span style="display:block" class="fifty">
+
   
 - Inter-Annotator-Agreement
   * 89% Zeilen (Ausbeute Double-Keying)
@@ -127,7 +128,7 @@ count: false
   * 98.8% Zeichen (= 1.2% CER): nur Fraktur (`GT4HistOCR+frk+Fraktur`)
   * 96.2% Zeichen (= 3.8% CER): nur Antiqua (`deu+Latin`)
 
-</div></div>
+</span></span>
 
 
 ---
