@@ -84,24 +84,32 @@ class: part-slide
    - Textnormalisierung (automatische Nachkorrektur; optional)
    - Double-Keying zur Qualitätskontrolle
    - Konfliktbereinigung (manuelle Nachkorrektur; optional)
-5. Export Zeilen-GT (Format für tesstrain/ocropus/kraken/...)
+5. Export Zeilen-GT
+   - Format für tesstrain/ocropus/kraken/…
+   - Publikation auf [Github](https://github.com/slub/slub_ocr_gt)
 
 ---
 
 ### OCR-Workflow
 
 - Konfiguration und Prozessierung mit [OCR-D](https://ocr-d.de)
+- meist:
+  * Binarisierung: [SBB](https://github.com/qurator-spk/sbb_binarization) (neuronal)
+  * Cropping: [Ocropus](https://github.com/OCR-D/ocrd_anybaseocr) (regelbas.)
+  * Deskewing: [Ocropus](https://github.com/cisocrgroup/ocrd_cis/) / [Tesseract](https://github.com/OCR-D/ocrd_tesserocr) (regelbas.)
+  * Segmentierung: [Ocropus](https://github.com/cisocrgroup/ocrd_cis/) / [Tesseract](https://github.com/OCR-D/ocrd_tesserocr) (regelbas.)
+  * Dewarping: [Ocropus](https://github.com/cisocrgroup/ocrd_cis/) (regelbas.)
+  * Erkennung: [Tesseract](https://github.com/OCR-D/ocrd_tesserocr) (neuronal)
 - Anpassung je nach Material und Sprachen
 - Rückgriff auf existierende, bestpassende OCR-Modelle
-- ...
 
 ---
 
 ### Annotationsumgebung
 
 - Excel / LibreOffice Calc
-- 1 Tabelle pro Seite mit 1 Zeile pro Textzeile und Spalten
-  * Zuordnungsdatum
+- 1 Tabelle pro Seite mit 1 Zeile pro Textzeile und Spalten für:
+  * ID (aus PAGE-XML)
   * Text (aus OCR)
   * Status (offen/fertig/fehlerhaft)
   * Bild (aus Binarisierung und Zeilensegmentierung)  
@@ -158,7 +166,7 @@ class: part-slide
 - Inter-Annotator-Agreement
   * 89% Zeilen (DK-Ausbeute)
   * 99.7% Zeichen (= 0.3% CER)
-- Genauigkeit der Baseline-OCR
+- Genauigkeit Baseline-OCR
   * 97.2% Zeichen (= 2.8% CER)
   * 98.8% Zeichen (= 1.2% CER)  
     – nur Fraktur (`GT4HistOCR+frk+Fraktur`)
@@ -181,15 +189,16 @@ class: part-slide
 
 ## Vorgehen Training
 
-- mit [tesstrain](https://github.com/tesseract-ocr/tesstrain)
+- Modelle für Tesseract  
+  – mit [tesstrain](https://github.com/tesseract-ocr/tesstrain)
 - randomisierte 10%-Aufteilung (Prüf- vs Lernstichprobe)  
   – je Werk
 - Gruppierung der Dateipaare (werkspezifisch vs. generisch)  
   – per Symlinks
 - Parameterwahl (Finetuning vs. Baseline)  
   – Basismodell, Lernrate und Iterationen
-- Augmentierung (Rauschen, Binarisierung, Drehung, Verzerrung)  
-  – Robustheit
+- Augmentierung (für robustere Modelle)  
+  – Rauschen, Binarisierung, Drehung, Verzerrung
 
 ---
 
