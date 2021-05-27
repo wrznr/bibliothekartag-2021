@@ -60,17 +60,20 @@ count: false
 
 ---
 
-### Transkriptionsrichtlinien
+class: part-slide
 
-- Orientierung an DTA / OCR-D **GT-Level 2**  
-  * bester Kompromiss aus Aufwand und Genauigkeit
-  * häufige Eingabe von Sonderzeichen (`ſ ꝛ aͤ oͤ uͤ  — ⸗` …)
+# Datenbereitstellung
 
-...
+- Vorgehen
+  * OCR-Workflow
+  * Annotationsumgebung
+  * Transkriptionsrichtlinien
+  * Textnormalisierung
+- Ergebnisse
 
 ---
 
-### Vorgehen Datenbereitstellung
+## Vorgehen Datenbereitstellung
 
 1. OCR-D-Workflow (manuell optimiert je Werk)
 2. Extraktion von .xslx-Dateien
@@ -85,53 +88,103 @@ count: false
 
 ---
 
+### OCR-Workflow
+
+- Konfiguration und Prozessierung mit [OCR-D](https://ocr-d.de)
+- Anpassung je nach Material und Sprachen
+- Rückgriff auf existierende, bestpassende OCR-Modelle
+- ...
+
+---
+
+### Annotationsumgebung
+
+- Excel / LibreOffice Calc
+- Tabelle mit
+  * Zuordnungsdatum
+  * Text (aus OCR)
+  * Status (offen/fertig/fehlerhaft)
+  * Bild (aus Binarisierung und Zeilensegmentierung)
+- Klick auf Faksimile (DFG-Viewer)
+![screenshot](excel-ocr-gt-annotation.png)
+
+---
+
+### Transkriptionsrichtlinien
+
+- Orientierung an DTA / OCR-D **GT-Level 2**  
+  * bester Kompromiss aus Aufwand und Genauigkeit
+  * häufige Eingabe von Sonderzeichen (`ſ ꝛ aͤ oͤ uͤ  — ⸗` …)
+
+...
+
+---
+
 ### Textnormalisierung
 
 - automatische Ersetzung bestimmter Muster zur Bereinigung von
   * häufigen Flüchtigkeitsfehlern
   * systematischen Abweichungen (wie Konventionen zu Interpunktion)
 - Erhöhung der Ausbeute, Vermeidung von Unterrepräsentation
-- abhängig vom Material (ohne/mit `aͤ`, `oͤ`, `uͤ`, `ſ`, `ß`, `⸗`, `,` …) <!-- oder gemischt -->
+- abhängig vom Material (manchmal/immer ohne/mit `aͤ`, `oͤ`, `uͤ`, `ſ`, `ß`, `⸗`, `,` …) <!-- oder gemischt -->
 - Beispiele:  
 
-| `r" ⸗ "` → `"⸗"` &nbsp; `r"ä"` → `"aͤ"` &nbsp; `r"[=-]$"` → `"⸗"` | `r" /"` → `"/"` &nbsp; `r"/(?=\S)"` → `"/ "` |
+| `r" ⸗ "` → `"⸗"` <br/> `r"ä"` → `"aͤ"` <br/> `r"[=-]$"` → `"⸗"` | `r" /"` → `"/"` <br/> `r"/(?=\S)"` → `"/ "` |
 | --- | --- |
 | ![Beispielbild Loskiel](./img/FILE_0007_GT_Page1_Block3_Page1_Block3_line0003.bin.png) | ![Beispielbild Ryff](./img/FILE_0408_GT_Page1_Block1_Page1_Block1_line0023.bin.png) |
-| "Bruͤder<u> = </u>Unit<u>ä</u>t iſt die unter die Indianer in" | "bel<u> </u>/ Knoblauch<u> </u>/ Senff<u> </u>/ Eſſig<u> </u>/ Saltz vñ" |
+| Bruͤder<u> = </u>Unit<u>ä</u>t iſt die unter die Indianer in | bel<u> </u>/ Knoblauch<u> </u>/ Senff<u> </u>/ Eſſig<u> </u>/ Saltz vñ |
 
 ---
 
-### Ergebnisse Datenbereitstellung
+## Ergebnisse Datenbereitstellung
 
 .cols[
 .fifty[
      
 - Umfang (vorläufig):
   * 18 Bearbeiter, ~200 Emails
-  * 16 Werke, 10 mit Double-Keying
-  * → 6473 Seiten (vollständig)
-  * → 199317 Zeilen (vollständig)
-  * → 477 Seiten (vorausgewählt)
-  * → 20808 Zeilen (vorausgewählt)
-  * → 14909 Zeilen (korrigiert)
-  * → 13335 Zeilen (übereinstimmend)
+  * 16 Werke, 10 mit Double-Keying  
+    → 6473 Seiten (vollständig)  
+    → 477 Seiten (vorausgewählt)  
+    → 20808 Zeilen (vorausgewählt)  
+    → 14909 Zeilen (korrigiert)  
+    → 13335 Zeilen (übereinstnd.)
     
 ]
 
 .fifty[
   
 - Inter-Annotator-Agreement
-  * 89% Zeilen (Ausbeute Double-Keying)
+  * 89% Zeilen (DK-Ausbeute)
   * 99.7% Zeichen (= 0.3% CER)
 - Genauigkeit der Baseline-OCR
   * 97.2% Zeichen (= 2.8% CER)
-  * 98.8% Zeichen (= 1.2% CER):  
-    nur Fraktur (`GT4HistOCR+frk+Fraktur`)
-  * 96.2% Zeichen (= 3.8% CER):  
-    nur Antiqua (`deu+Latin`)
+  * 98.8% Zeichen (= 1.2% CER)  
+    – nur Fraktur (`GT4HistOCR+frk+Fraktur`)
+  * 96.2% Zeichen (= 3.8% CER)  
+    – nur Antiqua (`deu+Latin`)
 
 ]
 ]
+
+---
+
+class: part-slide
+
+# Training
+
+- Vorgehen
+- Ergebnisse
+
+---
+
+## Vorgehen Training
+
+- mit [tesstrain](https://github.com/tesseract-ocr/tesstrain)
+- 10% Split (Prüf- vs Lernstichprobe) – je Werk
+- Gruppierung der Dateipaare (werkspezifisch vs. generisch) – per Symlinks
+- Parameter (Finetuning vs. Baseline) – Basismodell, Lernrate und Iterationen
+- Augmentierung (Rauschen, Binarisierung, Drehung, Verzerrung) – Robustheit
 
 ---
 
@@ -142,6 +195,7 @@ count: false
 - generisches Finetuning (nur Antiqua)
 - generisches Finetuning (alles)
 - generisches Baseline-Training (alles)
+- generisches Baseline-Training (alles + GT4HistOCR)
 
 | **Werk** | **CER vorher** | **CER nachher** |
 | --- | --- | --- |
@@ -156,6 +210,7 @@ class: part-slide
 
 # Vielen Dank für Ihre Aufmerksamkeit!
 
-<center>
-<a href="https://wrznr.github.io/bibliothekartag-2021">wrznr.github.io/bibliothekartag-2021</a>
-</center>
+.center[
+[wrznr.github.io/bibliothekartag-2021](https://wrznr.github.io/bibliothekartag-2021)
+[github.com/slub/slub_ocr_gt](https://github.com/slub/slub_ocr_gt)
+]
