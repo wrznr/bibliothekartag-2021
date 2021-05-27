@@ -93,17 +93,18 @@ count: false
 - Erhöhung der Ausbeute, Vermeidung von Unterrepräsentation
 - abhängig vom Material (ohne/mit `aͤ`, `oͤ`, `uͤ`, `ſ`, `ß`, `⸗`, `,` …) <!-- oder gemischt -->
 - Beispiele:  
-   
-  | `r" ⸗ "` → `"⸗"` &nbsp; `r"ä"` → `"aͤ"` &nbsp; `r"[=-]$"` → `"⸗"` | `r" /"` → `"/"` &nbsp; `r"/(?=\S)"` → `"/ "` |
-  | --- | --- |
-  | ![Beispielbild Loskiel](./img/FILE_0007_GT_Page1_Block3_Page1_Block3_line0003.bin.png) | ![Beispielbild Ryff](./img/FILE_0408_GT_Page1_Block1_Page1_Block1_line0023.bin.png) |
-  | "Bruͤder<u> = </u>Unit<u>ä</u>t iſt die unter die Indianer in" | "bel<u> </u>/ Knoblauch<u> </u>/ Senff<u> </u>/ Eſſig<u> </u>/ Saltz vñ" |
+
+| `r" ⸗ "` → `"⸗"` &nbsp; `r"ä"` → `"aͤ"` &nbsp; `r"[=-]$"` → `"⸗"` | `r" /"` → `"/"` &nbsp; `r"/(?=\S)"` → `"/ "` |
+| --- | --- |
+| ![Beispielbild Loskiel](./img/FILE_0007_GT_Page1_Block3_Page1_Block3_line0003.bin.png) | ![Beispielbild Ryff](./img/FILE_0408_GT_Page1_Block1_Page1_Block1_line0023.bin.png) |
+| "Bruͤder<u> = </u>Unit<u>ä</u>t iſt die unter die Indianer in" | "bel<u> </u>/ Knoblauch<u> </u>/ Senff<u> </u>/ Eſſig<u> </u>/ Saltz vñ" |
 
 ---
 
 ### Ergebnisse Datenbereitstellung
 
-.left-column[
+.cols[
+.fifty[
      
 - Umfang (vorläufig):
   * 18 Bearbeiter, ~200 Emails
@@ -116,7 +117,8 @@ count: false
   * → 13335 Zeilen (übereinstimmend)
     
 ]
-.right-column[
+
+.fifty[
   
 - Inter-Annotator-Agreement
   * 89% Zeilen (Ausbeute Double-Keying)
@@ -129,7 +131,7 @@ count: false
     nur Antiqua (`deu+Latin`)
 
 ]
-
+]
 
 ---
 
