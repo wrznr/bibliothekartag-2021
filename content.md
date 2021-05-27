@@ -100,21 +100,22 @@ class: part-slide
 ### Annotationsumgebung
 
 - Excel / LibreOffice Calc
-- Tabelle mit
+- 1 Tabelle pro Seite mit 1 Zeile pro Textzeile und Spalten
   * Zuordnungsdatum
   * Text (aus OCR)
   * Status (offen/fertig/fehlerhaft)
-  * Bild (aus Binarisierung und Zeilensegmentierung)
-- Klick auf Faksimile (DFG-Viewer)
-![screenshot](excel-ocr-gt-annotation.png)
+  * Bild (aus Binarisierung und Zeilensegmentierung)  
+    Klick → Faksimile (DFG-Viewer)
+![screenshot](./img/excel-ocr-gt-annotation.png)
 
 ---
 
 ### Transkriptionsrichtlinien
 
-- Orientierung an DTA / OCR-D **GT-Level 2**  
+- Orientierung an [DTA](https://www.deutschestextarchiv.de/doku/basisformat/transkription.html) / [OCR-D](https://ocr-d.de/de/gt-guidelines/trans/transkription.html) **GT-Level 2**  
   * bester Kompromiss aus Aufwand und Genauigkeit
   * häufige Eingabe von Sonderzeichen (`ſ ꝛ aͤ oͤ uͤ  — ⸗` …)
+  * viele verbleibende Unklarheiten...
 
 ...
 
@@ -126,7 +127,7 @@ class: part-slide
   * häufigen Flüchtigkeitsfehlern
   * systematischen Abweichungen (wie Konventionen zu Interpunktion)
 - Erhöhung der Ausbeute, Vermeidung von Unterrepräsentation
-- abhängig vom Material (manchmal/immer ohne/mit `aͤ`, `oͤ`, `uͤ`, `ſ`, `ß`, `⸗`, `,` …) <!-- oder gemischt -->
+- abhängig vom Material (manchmal/immer ohne/mit `aͤ` `oͤ` `uͤ` `ſ` `ß` `⸗` `,` …) <!-- oder gemischt -->
 - Beispiele:  
 
 | `r" ⸗ "` → `"⸗"` <br/> `r"ä"` → `"aͤ"` <br/> `r"[=-]$"` → `"⸗"` | `r" /"` → `"/"` <br/> `r"/(?=\S)"` → `"/ "` |
@@ -181,10 +182,14 @@ class: part-slide
 ## Vorgehen Training
 
 - mit [tesstrain](https://github.com/tesseract-ocr/tesstrain)
-- 10% Split (Prüf- vs Lernstichprobe) – je Werk
-- Gruppierung der Dateipaare (werkspezifisch vs. generisch) – per Symlinks
-- Parameter (Finetuning vs. Baseline) – Basismodell, Lernrate und Iterationen
-- Augmentierung (Rauschen, Binarisierung, Drehung, Verzerrung) – Robustheit
+- randomisierte 10%-Aufteilung (Prüf- vs Lernstichprobe)  
+  – je Werk
+- Gruppierung der Dateipaare (werkspezifisch vs. generisch)  
+  – per Symlinks
+- Parameterwahl (Finetuning vs. Baseline)  
+  – Basismodell, Lernrate und Iterationen
+- Augmentierung (Rauschen, Binarisierung, Drehung, Verzerrung)  
+  – Robustheit
 
 ---
 
