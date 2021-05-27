@@ -1,4 +1,5 @@
-* { font-family:'Bitter',serif }
+/* our standard font needs to be able to display glyphs like aͤ */
+* { font-family:'Bitter','Noto Serif','Roboto',serif }
 
 a { color:#00afc8; text-decoration:none; font-family:monospace }
 
