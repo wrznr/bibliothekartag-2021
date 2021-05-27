@@ -6,12 +6,12 @@ layout: true
   <table>
     <tr>
       <td style="text-align:right">Sächsische Landesbibliothek – Staats- und Universitätsbibliothek</td>
-      <td>Date</td>
+      <td>109. Bibliothekartag</td>
       <td style="text-align:right"><a href="https://www.slub-dresden.de/">www.slub-dresden.de</a></td>
     </tr>
     <tr>
       <td style="text-align:right">Referate 4.3 & 2.5</td>
-      <td />
+      <td>17. Juni 2021</td>
     </tr>
   </table>
 </div>
@@ -93,12 +93,10 @@ count: false
 - Erhöhung der Ausbeute, Vermeidung von Unterrepräsentation
 - abhängig vom Material (ohne/mit `aͤ`, `oͤ`, `uͤ`, `ſ`, `ß`, `⸗`, `,` …) <!-- oder gemischt -->
 - Beispiele:
-  * `r" ⸗ "` → `"⸗"`  `r"ä"` → `"aͤ"`   `r"[=-]$"` → `"⸗"`  
-    ![Beispielbild Loskiel](./img/FILE_0007_GT_Page1_Block3_Page1_Block3_line0003.bin.png)  
-    "Bruͤder<u> = </u>Unit<u>ä</u>t iſt die unter die Indianer in"
-  * `r" /"` → `"/"`    `r"/(?=\S)"` → `"/ "`  
-    ![Beispielbild Ryff](./img/FILE_0408_GT_Page1_Block1_Page1_Block1_line0023.bin.png)  
-    "bel<u> </u>/ Knoblauch<u> </u>/ Senff<u> </u>/ Eſſig<u> </u>/ Saltz vñ"
+  | `r" ⸗ "` → `"⸗"`  `r"ä"` → `"aͤ"`   `r"[=-]$"` → `"⸗"` | `r" /"` → `"/"`    `r"/(?=\S)"` → `"/ "` |
+  | --- | --- |
+  | ![Beispielbild Loskiel](./img/FILE_0007_GT_Page1_Block3_Page1_Block3_line0003.bin.png) | ![Beispielbild Ryff](./img/FILE_0408_GT_Page1_Block1_Page1_Block1_line0023.bin.png)   |
+  | "Bruͤder<u> = </u>Unit<u>ä</u>t iſt die unter die Indianer in" | "bel<u> </u>/ Knoblauch<u> </u>/ Senff<u> </u>/ Eſſig<u> </u>/ Saltz vñ" |
 
 ---
 
