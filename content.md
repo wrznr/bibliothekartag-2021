@@ -40,12 +40,12 @@ layout: true
 class: title-slide
 count: false
 
-# Title
-## Subtitle
+# Kollaborative Erstellung von Trainingsmaterialien für OCR
+## Ein Werkstattbericht
 
 ---
 
-# Overview
+# Überblick
 
 - Section 1
   + Subsection 1
@@ -81,7 +81,7 @@ count: false
    - Textnormalisierung (automatische Nachkorrektur; optional)
    - Double-Keying zur Qualitätskontrolle
    - Konfliktbereinigung (manuelle Nachkorrektur; optional)
-5. Export Line-GT (Format für tesstrain/ocropus/kraken/...)
+5. Export Zeilen-GT (Format für tesstrain/ocropus/kraken/...)
 
 ---
 
@@ -90,25 +90,22 @@ count: false
 - automatische Ersetzung bestimmter Muster zur Bereinigung von
   * häufigen Flüchtigkeitsfehlern
   * systematischen Abweichungen (wie Konventionen zu Interpunktion)
-- zur Erhöhung der Ausbeute, Vermeidung von Unterrepräsentation
-- abhängig vom Material (ohne/mit/gemischt `aͤ oͤ uͤ `, `ſ`, `ß`, `⸗`, `,` …)
-
+- Erhöhung der Ausbeute, Vermeidung von Unterrepräsentation
+- abhängig vom Material (ohne/mit `aͤ`, `oͤ`, `uͤ`, `ſ`, `ß`, `⸗`, `,` …) <!-- oder gemischt -->
 - Beispiele:
   * `r" ⸗ "→"⸗"` `r"ä"→"aͤ"` `r"[=-]$"→"⸗"`  
     ![Beispielbild Loskiel](./img/FILE_0007_GT_Page1_Block3_Page1_Block3_line0003.bin.png)  
-    <tt>Bruͤder<u> = </u>Unit<u>ä</u>t iſt die unter die Indianer in</tt>
+    `Bruͤder<u> = </u>Unit<u>ä</u>t iſt die unter die Indianer in`
   * `r" /"→"/"` `r"/(?=\S)"→"/ "`  
     ![Beispielbild Ryff](./img/FILE_0408_GT_Page1_Block1_Page1_Block1_line0023.bin.png)
-    <tt>bel<u> </u>/ Knoblauch<u> </u>/ Senff<u> </u>/ Eſſig<u> </u>/ Saltz vñ</tt>
+    `bel<u> </u>/ Knoblauch<u> </u>/ Senff<u> </u>/ Eſſig<u> </u>/ Saltz vñ`
 
 ---
 
 ## Ergebnisse Datenbereitstellung
 
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr style="vertical-align:top">
-    <td>
-      
+<div class="cols"><div class="fifty">
+     
 - Umfang (vorläufig):
   * 18 Bearbeiter, ~200 Emails
   * 16 Werke, 10 mit Double-Keying
@@ -119,9 +116,8 @@ count: false
   * → 14909 Zeilen (korrigiert)
   * → 13335 Zeilen (übereinstimmend)
     
-  </td>
-    <td>
-      
+  </div><div class="fifty">
+  
 - Inter-Annotator-Agreement
   * 89% Zeilen (Ausbeute Double-Keying)
   * 99.7% Zeichen (= 0.3% CER)
@@ -130,9 +126,7 @@ count: false
   * 98.8% Zeichen (= 1.2% CER): nur Fraktur (`GT4HistOCR+frk+Fraktur`)
   * 96.2% Zeichen (= 3.8% CER): nur Antiqua (`deu+Latin`)
 
-    </td>
-  </tr>
-</table>
+  </div></div>
 
 
 ---
