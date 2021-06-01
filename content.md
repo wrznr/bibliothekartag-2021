@@ -178,7 +178,7 @@ class: part-slide
     * erstaunliche Vielfalt von Schriftarten
     * historische Zeichen und Diakritika
     * Latein <!-- "lat" ohne ſ und hist. Abk.zeichen und Ligaturen unbrauchbar -->
-        + hoher Anteil im Datenbestand
+        + hoher Anteil im Datenbestand <!-- 3 Werke von 20! -->
         + immer in Antiqua gesetzt
 - Fraktur 20. Jahrhundert
     * teilweise große Abweichungen zur „Standardfraktur“
@@ -214,17 +214,17 @@ class: part-slide
 
 * typische Defizite sichtbar
 
-| **Antiqua** | **Fraktur** | **Sorbisch** |
-| --- | --- | --- |
-| `[fl{]` → `ſ` <br/> Ligaturen <br/> `.` ←→ `,` <br/> `[A-Z]` → `[a-z]` | `[fl]` → `ſ` <br/> `[äöü]` → `[aͤoͤuͤ]` <br/> `[-=:–]` → `⸗` <br/> `[BSC1]` → `[VFTI]` |  `é` → `[ćč]` <br/> `s` → `š` <br/> `[öèéeoͤ]` → `ě` <br/> `[Zz]` → `ž` <br/> `[ftr]` → `ř` <br/> `t` → `ł` |
-| ![Beispielbild Cosmogonia](./img/cosmogonia_FILE_0013_GT_region0002_region0002_line0002.bin.png) | ![Beispielbild Hottenroth](./img/hottenroth_jugenderinnerungen_FILE_0010_GT_region0002_region0002_line0016.bin.png) | |
-| gedachten Kette mitgetheilte<u> </u>, er<u>f</u>te Ausflus des ele<u>&</u>tri<u>f</u>chen | Stiege gelangen konnte. Hier war aus Brettern ein <u>S</u>u<u>f-</u> | |
-| ![Beispielbild Kopp](./img/kopp_molecularwelt_FILE_0015_GT_region0000_region0000_line0021.bin.png) | ![Beispielbild Loskiel](./img/loskiel_FILE_0007_GT_Page1_Block3_Page1_Block3_line0003.bin.png) | |
-| be<u>ff</u>ere Bezeichnung <u>ZU</u> <u>f</u>uchen, welche dem von uns <u>J</u>etzt | Br<u>ü</u>der<u> - </u>Unit<u>ä</u>t iſt die unter die Indianer in | |
-| ![Beispielbild Marshall](./img/marshall_tiefsee_FILE_0013_GT_region0006_region0006_line0005.bin.png) | ![Beispielbild Ryff](./img/ryff_krankenkochbuch_FILE_0016_GT_Page1_Block3_Page1_Block3_line0012.bin.png) | |
-| Strömungen, <u>CS</u> atmet mit <u>f</u>einer <u>3</u>randung und mit dem Spiel <u>f</u>einer | <u>S</u>altun<u>gi</u>n <u>p</u>eſtilentziſchem luff<u>e</u>. 212 | |
-| ![Beispielbild Wallerius](./img/wallerius_elementa-metallurgiae_FILE_0014_GT_region0002_region0002_line0011.bin.png) | ![Beispielbild Thüringische](./img/thüringische-studien_FILE_0011_GT_region0003_region0003_line0014.bin.png) | |
-| p<u>ufl</u>ula<u>v</u>e qu<u>afl</u>um<u>.</u> metallicum innocentia, bone- | endlich in den Neubau der Landes<u>-</u>(je<u>ß</u>t Staats<u>-</u>)Bank gebracht und nun | |
+| **Antiqua** | **Fraktur** | <!-- **Sorbisch** | -->
+| --- | --- | <!-- --- | -->
+| `[fl{]` → `ſ` <br/> Ligaturen <br/> `.` ←→ `,` <br/> `[A-Z]` → `[a-z]` | `[fl]` → `ſ` <br/> `äöü` → `aͤoͤuͤ` <br/> `[-=:–]` → `⸗` <br/> `BSC1` → `VFTI` | <!-- `é` → `[ćč]` <br/> `s` → `š` <br/> `[öèéeoͤ]` → `ě` <br/> `[Zz]` → `ž` <br/> `[ftr]` → `ř` <br/> `t` → `ł` | -->
+| ![Beispielbild Cosmogonia](./img/cosmogonia_FILE_0013_GT_region0002_region0002_line0002.bin.png) | ![Beispielbild Hottenroth](./img/hottenroth_jugenderinnerungen_FILE_0010_GT_region0002_region0002_line0016.bin.png) |
+| gedachten Kette mitgetheilte<u> </u>, er<u>f</u>te Ausflus des ele<u>&</u>tri<u>f</u>chen | Stiege gelangen konnte. Hier war aus Brettern ein <u>S</u>u<u>f-</u> |
+| ![Beispielbild Kopp](./img/kopp_molecularwelt_FILE_0015_GT_region0000_region0000_line0021.bin.png) | ![Beispielbild Loskiel](./img/loskiel_FILE_0007_GT_Page1_Block3_Page1_Block3_line0003.bin.png) |
+| be<u>ff</u>ere Bezeichnung <u>ZU</u> <u>f</u>uchen, welche dem von uns <u>J</u>etzt | Br<u>ü</u>der<u> - </u>Unit<u>ä</u>t iſt die unter die Indianer in |
+| ![Beispielbild Marshall](./img/marshall_tiefsee_FILE_0013_GT_region0006_region0006_line0005.bin.png) | ![Beispielbild Ryff](./img/ryff_krankenkochbuch_FILE_0016_GT_Page1_Block3_Page1_Block3_line0012.bin.png) |
+| Strömungen, <u>CS</u> atmet mit <u>f</u>einer <u>3</u>randung und mit dem Spiel <u>f</u>einer | <u>S</u>altun<u>gi</u>n <u>p</u>eſtilentziſchem luff<u>e</u>. 212 |
+| ![Beispielbild Wallerius](./img/wallerius_elementa-metallurgiae_FILE_0014_GT_region0002_region0002_line0011.bin.png) | ![Beispielbild Thüringische](./img/thüringische-studien_FILE_0011_GT_region0003_region0003_line0014.bin.png) |
+| p<u>ufl</u>ula<u>v</u>e qu<u>afl</u>um<u>.</u> metallicum innocentia, bone- | endlich in den Neubau der Landes<u>-</u>(je<u>ß</u>t Staats<u>-</u>)Bank gebracht und nun |
 
 ---
 
@@ -286,7 +286,7 @@ count: false
 </center>
 
 ---
-Interpunktion
+
 count: false
 
 # Transkription – Richtlinien
@@ -353,8 +353,8 @@ count: false
 .fifty[
   
 - Inter-Annotator-Agreement
-    * 89% Zeilen (DK-Ausbeute)
-    * **99.7%** Zeichen (= 0.3% CER)
+    * 85% Zeilen (DK-Ausbeute)
+    * **99.5%** Zeichen (= 0.5% CER)
 - Genauigkeit Baseline-OCR
     * **97.2%** Zeichen (= 2.8% CER)
     * nur Fraktur
@@ -400,17 +400,33 @@ class: part-slide
 - generisches Finetuning (nur Fraktur)
 - generisches Finetuning (nur Antiqua)
 - generisches Finetuning (alles)
-- grundständiges Training (mit weiteren Daten)
+- <span style="color:gray">grundständiges Training (mit weiteren Daten)</span>
 
 ---
 
 # Training – Ergebnisse
 
-| **Werk** | **CER vorher** | **CER nachher** |
-| --- | --- | --- |
-| `krankenkochbuch` | ?? | ?? |
-| ... | ... | ... |
-| gesamt | ?? | ?? |
+| **Werk** | **Schriftart** | **CER vorher** | **CER nachher** |
+| --- | --- | --- | --- |
+| `ryff_krankenkochbuch_1555` | Schwabacher | 3.7% | 0.01% |
+| `koenig_cosmogonia_1763` | Antiqua | 5.1% | 0.03% |
+| `wallerius_elementa-metallurgiae_1768` | Antiqua | 7.4% | 0.01% |
+| `loskiel_geschichte-brüdermission_1789` | Fraktur | 1.7% | 0.04% |
+| `cotta_rede-forstlehranstalt_1811` | Antiqua | 1.2% | 0.01% |
+| `arch-hist-sax_1867` | Fraktur | 0.6% | 0.01% |
+| `hansen1874_lichtbrechung` | Antiqua | 9.5% | 0.26% |
+| `gabelentz_melanesisch_1879` | Antiqua | 3.3% | 0.07% |
+| `bogusławski_sorbische-nationalgeschichte_1884` | Antiqua | 7.5% | 0.6% |
+| `kopp1886_molecularwelt` | Antiqua | 5.0% | 0.01% |
+| `marshall1888_tiefsee` | Antiqua | 8.5% | 0.27% |
+| `schilling-journal_gas-wasser_1892` | Antiqua | 0.9% | 0.2% |
+| `arch-hist-sax_1910` | Antiqua | 1.8% | 0.01% |
+| `katalog-kunstgewerbeausstellung_1906` | Antiqua | 1.4% | 0.2% |
+| `hottenroth1925_jugenderinnerungen` | Fraktur | 0.6% | 0.01% |
+| `schmidt1936_thueringische-studien` | Fraktur | 0.6% | 0.02% |
+| generisch | Antiqua | 3.8% | 1.00% |
+| generisch | Fraktur | 1.2% | 0.03% |
+| generisch | alles | 2.8% | 0.1% |
 
 ---
 
