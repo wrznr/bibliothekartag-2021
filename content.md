@@ -269,7 +269,7 @@ count: false
   * in der Praxis auftretende Grenzfälle bzw. Lücken
 
 <center>
-<img src="img/kollaborative-annotation-kommentar4.png" width="400px" />
+<img src="img/kollaborative-annotation-kommentar4.png" width="500px" />
 </center>
 
 ---
@@ -299,7 +299,7 @@ count: false
   * in der Praxis auftretende Grenzfälle bzw. Lücken
 
 <center>
-<img src="img/kollaborative-annotation-kommentar5.png" width="400px" />
+<img src="img/kollaborative-annotation-kommentar5.png" width="450px" />
 </center>
 
 ---
