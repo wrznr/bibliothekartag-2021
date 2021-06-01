@@ -268,7 +268,9 @@ count: false
   * häufige Eingabe von Sonderzeichen (`ſ ꝛ aͤ oͤ uͤ  — ⸗` …)
   * in der Praxis auftretende Grenzfälle bzw. Lücken
 
-![screenshot](./img/kollaborative-annotation-kommentar4.png)
+<center>
+<img src="img/kollaborative-annotation-kommentar4.png" width="400px" />
+</center>
 
 ---
 
@@ -281,7 +283,9 @@ count: false
   * häufige Eingabe von Sonderzeichen (`ſ ꝛ aͤ oͤ uͤ  — ⸗` …)
   * in der Praxis auftretende Grenzfälle bzw. Lücken
 
-![screenshot](./img/kollaborative-annotation-kommentar2.png)
+<center>
+<img src="img/kollaborative-annotation-kommentar2.png" width="400px" />
+</center>
 
 ---
 
@@ -294,7 +298,9 @@ count: false
   * häufige Eingabe von Sonderzeichen (`ſ ꝛ aͤ oͤ uͤ  — ⸗` …)
   * in der Praxis auftretende Grenzfälle bzw. Lücken
 
-![screenshot](./img/kollaborative-annotation-kommentar5.png)
+<center>
+<img src="img/kollaborative-annotation-kommentar5.png" width="400px" />
+</center>
 
 ---
 
