@@ -67,7 +67,7 @@ class: part-slide
 
 ---
 
-# Wie funktioniert's?
+# Prinzipien OCR
 
 - Schritt 1: Zeilenerkennung
     + **regelbasierte** (Bildmorphologie) oder
@@ -85,7 +85,7 @@ class: part-slide
 
 ---
 
-# Wie funktioniert's?
+# Prinzipien OCR
 
 - Schritt 2: Vektorisierung
     + **Skalierung** auf einheitliche Höhe
@@ -103,7 +103,7 @@ class: part-slide
 
 ---
 
-# Wie funktioniert's?
+# Prinzipien OCR
 
 - Schritt 3: Textermittlung
     + **Übergangswahrscheinlichkeiten** zwischen Vektoren
@@ -171,7 +171,7 @@ class: part-slide
 
 ---
 
-# Werkauswahl
+# Datenvorbereitung – Werkauswahl
 
 - historische Antiqua
     * bisher wenig beachtet
@@ -189,7 +189,7 @@ class: part-slide
 
 ---
 
-# OCR-Workflow
+# Datenvorbereitung – OCR-Workflow
 
 - Konfiguration und Prozessierung mit [OCR-D](https://ocr-d.de)
 - meist:
@@ -204,7 +204,7 @@ class: part-slide
 
 ---
 
-# Ergebnisbeispiele
+# Datenvorbereitung – Ergebnisse
 
 ---
 
@@ -213,13 +213,13 @@ class: part-slide
 # Transkription
 
 - Annotationsumgebung
-- Transkriptionsrichtlinien
+- Richtlinien
 - Textnormalisierung
 - Ergebnisse
 
 ---
 
-# Annotationsumgebung
+# Transkription – Annotationsumgebung
 
 - Excel / LibreOffice Calc
     * verbreitete, etablierte Software
@@ -238,13 +238,13 @@ class: part-slide
 
 ---
 
-# Annotationsumgebung – Ansicht
+# Transkription – Annotationsumgebung
 
 ![screenshot](./img/excel-ocr-gt-annotation.png)
 
 ---
 
-# Transkriptionsrichtlinien
+# Transkription – Richtlinien
 
 - Orientierung an [DTA](https://www.deutschestextarchiv.de/doku/basisformat/transkription.html) / [OCR-D](https://ocr-d.de/de/gt-guidelines/trans/transkription.html) **GT-Level 2**  
   * bester Kompromiss aus Aufwand und Genauigkeit
@@ -257,7 +257,7 @@ class: part-slide
 
 ---
 
-# Textnormalisierung
+# Transkription – Textnormalisierung
 
 - automatische Ersetzung bestimmter Muster zur Bereinigung von
   * typischen Flüchtigkeitsfehlern
@@ -274,7 +274,7 @@ class: part-slide
 
 ---
 
-# Ergebnisse Datenbereitstellung
+# Transkription – Ergebnisse
 
 .cols[
 .fifty[
@@ -334,7 +334,7 @@ class: part-slide
 
 ---
 
-# Training – Ergebnisse
+# Training – Experimente
 
 - werkspezifisches Finetuning
 - generisches Finetuning (nur Fraktur)
@@ -344,7 +344,7 @@ class: part-slide
 
 ---
 
-# Training – werkspezifisches Finetuning
+# Training – Ergebnisse
 
 | **Werk** | **CER vorher** | **CER nachher** |
 | --- | --- | --- |
@@ -362,7 +362,11 @@ class: part-slide
 
 # Diskussion
 
-- 
+- vielversprechende Ergebnisse sowohl bei **Annotation** als auch **Training**
+- Erkenntnisse
+    * gutes **Datenmanagement** nötig
+    * eindeutige **Transkriptionsrichtlinien** erforderlich
+    * kontinuierliche **Versorgung** mit neuen Werken wichtig
 
 ---
 
