@@ -259,7 +259,7 @@ class: part-slide
 
 ---
 
- count: false
+count: false
 
 # Transkription – Richtlinien
 
@@ -272,7 +272,7 @@ class: part-slide
 
 ---
 
- count: false
+count: false
 
 # Transkription – Richtlinien
 
@@ -285,7 +285,7 @@ class: part-slide
 
 ---
 
- count: false
+count: false
 
 # Transkription – Richtlinien
 
