@@ -129,20 +129,20 @@ den Nacht begegnen könnte, in Gnaden bewahren
 # Einleitung – Motivation
 
 - resultierende Textqualität (auch) abhängig von Modellpassung
-    * Modell: Wahrscheinlichkeitsverteilung über mgl. Zeichen
+    * Modell: Wahrscheinlichkeitsverteilung über alle Zeichen
 - mitgelieferte Modelle häufig ungeeignet für historische Vorlagen
     * unzureichende Passung zwischen Trainings- und Anwendungsdaten
     * synthetisches Training
-- Erhebung von Trainingsdaten für historische Vorlagen
+- Erhebung von Trainingsdaten für historische Vorlagen  
+  – starker Fokus auf Fraktur 19. Jahrhundert:
     * `GT4HistOCR` ([Springmann et al. 2018](https://arxiv.org/ftp/arxiv/papers/1809/1809.05501.pdf))
     * Fibeln 19. Jahrhundert ([Weil et al. 2020](https://github.com/UB-Mannheim/Fibeln))
     * NewsEye Austrian Newspapers 19th C. ([Mühlberger und Hackl 2019](https://zenodo.org/record/3387369#.YLY43nVfjCM))
-- starker Fokus auf Fraktur 19. Jahrhundert
 - **zusätzliche Trainingsdaten nötig**
 
 ---
 
-# Einleitung – Ablauf
+# Einleitung – Arbeitsablauf
 
 0. Werkauswahl (manuell)
 1. OCR-Workflow (manuell optimiert je Werk)
@@ -153,7 +153,7 @@ den Nacht begegnen könnte, in Gnaden bewahren
 4. Transkription (manuelle Textkorrektur)
 5. Import des Rücklaufs
    - Textnormalisierung (automatische Nachkorrektur; optional)
-   - Double-Keying zur Qualitätskontrolle (automatisch)
+   - Double-Keying (automatische Qualitätskontrolle)
    - Konfliktbereinigung (manuelle Nachkorrektur; optional)
 6. Export Zeilen-GT
    - Format für tesstrain/ocropus/kraken/…
@@ -217,13 +217,13 @@ class: part-slide
 | **Antiqua** | **Fraktur** | **Sorbisch** |
 | --- | --- | --- |
 | `[fl{]` → `ſ` <br/> Ligaturen <br/> `.` ←→ `,` <br/> `[A-Z]` → `[a-z]` | `[fl]` → `ſ` <br/> `[äöü]` → `[aͤoͤuͤ]` <br/> `[-=:–]` → `⸗` <br/> `[BSC1]` → `[VFTI]` |  `é` → `[ćč]` <br/> `s` → `š` <br/> `[öèéeoͤ]` → `ě` <br/> `[Zz]` → `ž` <br/> `[ftr]` → `ř` <br/> `t` → `ł` |
-| ![Beispielbild Cosmogonia](cosmogonia_FILE_0013_GT_region0002_region0002_line0002.bin.png) | ![Beispielbild Hottenroth](hottenroth_jugenderinnerungen_FILE_0010_GT_region0002_region0002_line0016.bin.png) | |
+| ![Beispielbild Cosmogonia](./img/cosmogonia_FILE_0013_GT_region0002_region0002_line0002.bin.png) | ![Beispielbild Hottenroth](./img/hottenroth_jugenderinnerungen_FILE_0010_GT_region0002_region0002_line0016.bin.png) | |
 | gedachten Kette mitgetheilte<u> </u>, er<u>f</u>te Ausflus des ele<u>&</u>tri<u>f</u>chen | Stiege gelangen konnte. Hier war aus Brettern ein <u>S</u>u<u>f-</u> | |
-| ![Beispielbild Kopp](kopp_molecularwelt_FILE_0015_GT_region0000_region0000_line0021.bin.png) | ![Beispielbild Loskiel](loskiel_FILE_0007_GT_Page1_Block3_Page1_Block3_line0003.bin.png) | |
+| ![Beispielbild Kopp](./img/kopp_molecularwelt_FILE_0015_GT_region0000_region0000_line0021.bin.png) | ![Beispielbild Loskiel](./img/loskiel_FILE_0007_GT_Page1_Block3_Page1_Block3_line0003.bin.png) | |
 | be<u>ff</u>ere Bezeichnung <u>ZU</u> <u>f</u>uchen, welche dem von uns <u>J</u>etzt | Br<u>ü</u>der<u> - </u>Unit<u>ä</u>t iſt die unter die Indianer in | |
-| ![Beispielbild Marshall](marshall_tiefsee_FILE_0013_GT_region0006_region0006_line0005.bin.png) | ![Beispielbild Ryff](ryff_krankenkochbuch_FILE_0016_GT_Page1_Block3_Page1_Block3_line0012.bin.png) | |
+| ![Beispielbild Marshall](./img/marshall_tiefsee_FILE_0013_GT_region0006_region0006_line0005.bin.png) | ![Beispielbild Ryff](./img/ryff_krankenkochbuch_FILE_0016_GT_Page1_Block3_Page1_Block3_line0012.bin.png) | |
 | Strömungen, <u>CS</u> atmet mit <u>f</u>einer <u>3</u>randung und mit dem Spiel <u>f</u>einer | <u>S</u>altun<u>gi</u>n <u>p</u>eſtilentziſchem luff<u>e</u>. 212 | |
-| ![Beispielbild Wallerius](wallerius_elementa-metallurgiae_FILE_0014_GT_region0002_region0002_line0011.bin.png) | ![Beispielbild Thüringische](thüringische-studien_FILE_0011_GT_region0003_region0003_line0014.bin.png) | |
+| ![Beispielbild Wallerius](./img/wallerius_elementa-metallurgiae_FILE_0014_GT_region0002_region0002_line0011.bin.png) | ![Beispielbild Thüringische](./img/thüringische-studien_FILE_0011_GT_region0003_region0003_line0014.bin.png) | |
 | p<u>ufl</u>ula<u>v</u>e qu<u>afl</u>um<u>.</u> metallicum innocentia, bone- | endlich in den Neubau der Landes<u>-</u>(je<u>ß</u>t Staats<u>-</u>)Bank gebracht und nun | |
 
 ---
@@ -342,8 +342,8 @@ count: false
 - Umfang (vorläufig):
   * 18 Bearbeiter, ~200 Emails
   * 16 Werke, 10 mit Double-Keying  
-    → ` 6473` Seiten (vollständig)  
-    → `  477` Seiten (vorausgewählt)  
+    → ` 6473` Seiten (vollständig)  
+    → `  477` Seiten (vorausgewählt)  
     → `20808` Zeilen (vorausgewählt)  
     → `14909` Zeilen (korrigiert)  
     → `13335` Zeilen (übereinstnd.)
