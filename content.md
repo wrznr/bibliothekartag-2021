@@ -214,9 +214,9 @@ class: part-slide
 
 * typische Defizite sichtbar
 
-| **Antiqua** | **Fraktur** | <!-- **Sorbisch** | -->
-| --- | --- | <!-- --- | -->
-| `[fl{]` → `ſ` <br/> Ligaturen <br/> `.` ←→ `,` <br/> `[A-Z]` → `[a-z]` | `[fl]` → `ſ` <br/> `äöü` → `aͤoͤuͤ` <br/> `[-=:–]` → `⸗` <br/> `BSC1` → `VFTI` | <!-- `é` → `[ćč]` <br/> `s` → `š` <br/> `[öèéeoͤ]` → `ě` <br/> `[Zz]` → `ž` <br/> `[ftr]` → `ř` <br/> `t` → `ł` | -->
+| **Antiqua** | **Fraktur** |
+| --- | --- |
+| `[fl{]` → `ſ` <br/> Ligaturen <br/> `.` ←→ `,` <br/> `[A-Z]` → `[a-z]` | `[fl]` → `ſ` <br/> `äöü` → `aͤoͤuͤ` <br/> `[-=:–]` → `⸗` <br/> `BSC1` → `VFTI` |
 | ![Beispielbild Cosmogonia](./img/cosmogonia_FILE_0013_GT_region0002_region0002_line0002.bin.png) | ![Beispielbild Hottenroth](./img/hottenroth_jugenderinnerungen_FILE_0010_GT_region0002_region0002_line0016.bin.png) |
 | gedachten Kette mitgetheilte<u> </u>, er<u>f</u>te Ausflus des ele<u>&</u>tri<u>f</u>chen | Stiege gelangen konnte. Hier war aus Brettern ein <u>S</u>u<u>f-</u> |
 | ![Beispielbild Kopp](./img/kopp_molecularwelt_FILE_0015_GT_region0000_region0000_line0021.bin.png) | ![Beispielbild Loskiel](./img/loskiel_FILE_0007_GT_Page1_Block3_Page1_Block3_line0003.bin.png) |
@@ -226,6 +226,11 @@ class: part-slide
 | ![Beispielbild Wallerius](./img/wallerius_elementa-metallurgiae_FILE_0014_GT_region0002_region0002_line0011.bin.png) | ![Beispielbild Thüringische](./img/thüringische-studien_FILE_0011_GT_region0003_region0003_line0014.bin.png) |
 | p<u>ufl</u>ula<u>v</u>e qu<u>afl</u>um<u>.</u> metallicum innocentia, bone- | endlich in den Neubau der Landes<u>-</u>(je<u>ß</u>t Staats<u>-</u>)Bank gebracht und nun |
 
+ <!-- **Sorbisch** | -->
+ <!-- --- | -->
+ <!-- `é` → `[ćč]` <br/> `s` → `š` <br/> `[öèéeoͤ]` → `ě` <br/> `[Zz]` → `ž` <br/> `[ftr]` → `ř` <br/> `t` → `ł` | -->
+ 
+ 
 ---
 
 class: part-slide
@@ -406,6 +411,8 @@ class: part-slide
 
 # Training – Ergebnisse
 
+.smaller[
+
 | **Werk** | **Schriftart** | **CER vorher** | **CER nachher** |
 | --- | --- | --- | --- |
 | `ryff_krankenkochbuch_1555` | Schwabacher | 3.7% | 0.01% |
@@ -416,17 +423,19 @@ class: part-slide
 | `arch-hist-sax_1867` | Fraktur | 0.6% | 0.01% |
 | `hansen1874_lichtbrechung` | Antiqua | 9.5% | 0.26% |
 | `gabelentz_melanesisch_1879` | Antiqua | 3.3% | 0.07% |
-| `bogusławski_sorbische-nationalgeschichte_1884` | Antiqua | 7.5% | 0.6% |
+| `bogusławski_nationalgeschichte_1884` | Antiqua | 7.5% | 0.60% |
 | `kopp1886_molecularwelt` | Antiqua | 5.0% | 0.01% |
 | `marshall1888_tiefsee` | Antiqua | 8.5% | 0.27% |
-| `schilling-journal_gas-wasser_1892` | Antiqua | 0.9% | 0.2% |
+| `schilling-journal_gas-wasser_1892` | Antiqua | 0.9% | 0.20% |
 | `arch-hist-sax_1910` | Antiqua | 1.8% | 0.01% |
-| `katalog-kunstgewerbeausstellung_1906` | Antiqua | 1.4% | 0.2% |
+| `katalog-kunstgewerbeausstellung_1906` | Antiqua | 1.4% | 0.20% |
 | `hottenroth1925_jugenderinnerungen` | Fraktur | 0.6% | 0.01% |
 | `schmidt1936_thueringische-studien` | Fraktur | 0.6% | 0.02% |
 | generisch | Antiqua | 3.8% | 1.00% |
 | generisch | Fraktur | 1.2% | 0.03% |
-| generisch | alles | 2.8% | 0.1% |
+| generisch | alles | 2.8% | 0.10% |
+
+]
 
 ---
 
