@@ -47,7 +47,7 @@ count: false
 
 # Überblick
 
-- zeilenbasierte OCR
+- Prinzipien OCR
 - Datenvorbereitung
 - Transkription
 - Training
@@ -73,12 +73,13 @@ count: false
 5. Export Zeilen-GT
    - Format für tesstrain/ocropus/kraken/…
    - Publikation auf [Github](https://github.com/slub/slub_ocr_gt)
+6. Training und Experimente
 
 ---
 
 class: part-slide
 
-# Zeilenbasierte OCR
+# Prinzipien OCR
 
 ---
 
@@ -125,12 +126,20 @@ class: part-slide
 # Annotationsumgebung
 
 - Excel / LibreOffice Calc
+  * Offline
+  * Rechtschreibkontrolle
+  * ...
 - 1 Tabelle pro Seite mit 1 Zeile pro Textzeile und Spalten für:
   * ID (aus PAGE-XML)
   * Text (aus OCR)
   * Status (offen/fertig/fehlerhaft)
   * Bild (aus Binarisierung und Zeilensegmentierung)  
     Klick → Faksimile (DFG-Viewer)
+
+---
+
+# Annotationsumgebung – Ansicht
+
 ![screenshot](./img/excel-ocr-gt-annotation.png)
 
 ---
@@ -142,6 +151,8 @@ class: part-slide
   * häufige Eingabe von Sonderzeichen (`ſ ꝛ aͤ oͤ uͤ  — ⸗` …)
   * viele verbleibende Unklarheiten...
 
+<!-- Intranetdialog -->
+
 ...
 
 ---
@@ -149,9 +160,10 @@ class: part-slide
 # Textnormalisierung
 
 - automatische Ersetzung bestimmter Muster zur Bereinigung von
-  * häufigen Flüchtigkeitsfehlern
+  * typischen Flüchtigkeitsfehlern
   * systematischen Abweichungen (wie Konventionen zu Interpunktion)
 - Erhöhung der Ausbeute, Vermeidung von Unterrepräsentation
+  * Gerade schwierige Daten sind wertvoll für das Training!
 - abhängig vom Material (manchmal/immer ohne/mit `aͤ` `oͤ` `uͤ` `ſ` `ß` `⸗` `,` …) <!-- oder gemischt -->
 - Beispiele:  
 
@@ -170,25 +182,27 @@ class: part-slide
 - Umfang (vorläufig):
   * 18 Bearbeiter, ~200 Emails
   * 16 Werke, 10 mit Double-Keying  
-    → 6473 Seiten (vollständig)  
-    → 477 Seiten (vorausgewählt)  
-    → 20808 Zeilen (vorausgewählt)  
-    → 14909 Zeilen (korrigiert)  
-    → 13335 Zeilen (übereinstnd.)
+    → ` 6473` Seiten (vollständig)  
+    → `  477` Seiten (vorausgewählt)  
+    → `20808` Zeilen (vorausgewählt)  
+    → `14909` Zeilen (korrigiert)  
+    → `13335` Zeilen (übereinstnd.)
     
 ]
 
 .fifty[
   
 - Inter-Annotator-Agreement
-  * 89% Zeilen (DK-Ausbeute)
-  * 99.7% Zeichen (= 0.3% CER)
+    * 89% Zeilen (DK-Ausbeute)
+    * **99.7%** Zeichen (= 0.3% CER)
 - Genauigkeit Baseline-OCR
-  * 97.2% Zeichen (= 2.8% CER)
-  * 98.8% Zeichen (= 1.2% CER)  
-    – nur Fraktur (`GT4HistOCR+frk+Fraktur`)
-  * 96.2% Zeichen (= 3.8% CER)  
-    – nur Antiqua (`deu+Latin`)
+    * **97.2%** Zeichen (= 2.8% CER)
+    * nur Fraktur
+        * `GT4HistOCR+frk+Fraktur`
+        * 98.8% Zeichen (= 1.2% CER)  
+    * nur Antiqua
+        * `deu+Latin`
+        * 96.2% Zeichen (= 3.8% CER)  
 
 ]
 ]
