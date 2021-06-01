@@ -61,25 +61,6 @@ class: part-slide
 
 ---
 
-# Überblick
-
-0. Werkauswahl
-1. OCR-D-Workflow (manuell optimiert je Werk)
-2. Extraktion von .xslx-Dateien
-   - 1 Datei pro Seite
-   - 1 Zeile pro Textzeile
-3. Verteilung an je 2 Bearbeiter
-4. Import des Rücklaufs
-   - Textnormalisierung (automatische Nachkorrektur; optional)
-   - Double-Keying zur Qualitätskontrolle
-   - Konfliktbereinigung (manuelle Nachkorrektur; optional)
-5. Export Zeilen-GT
-   - Format für tesstrain/ocropus/kraken/…
-   - Publikation auf [Github](https://github.com/slub/slub_ocr_gt)
-6. Training und Experimente
-
----
-
 class: part-slide
 
 # Prinzipien OCR
@@ -145,18 +126,38 @@ den Nacht begegnen könnte, in Gnaden bewahren
 
 ---
 
-# Wie funktioniert's?
+# Motivation
 
 - resultierende Textqualität (auch) abhängig von Modellpassung
     * Modell: Wahrscheinlichkeitsverteilung über mgl. Zeichen
 - mitgelieferte Modelle häufig ungeeignet für historische Vorlagen
     * unzureichende Passung zwischen Trainings- und Anwendungsdaten
     * synthetisches Training
-- Initiativen zur Erhebung von Trainingsdaten für historische Vorlagen
+- Erhebung von Trainingsdaten für historische Vorlagen
     * `GT4HistOCR` ([Springmann et al. 2018](https://arxiv.org/ftp/arxiv/papers/1809/1809.05501.pdf))
     * Fibeln 19. Jahrhundert ([Weil et al. 2020](https://github.com/UB-Mannheim/Fibeln))
     * NewsEye Austraian Newspapers 19th C. ([Mühlberger und Hackl 2019](https://zenodo.org/record/3387369#.YLY43nVfjCM))
 - starker Fokus auf Fraktur 19. Jahrhundert
+- **zusätzliche Trainingsdaten nötig**
+
+---
+
+# Ablauf
+
+0. Werkauswahl
+1. OCR-D-Workflow (manuell optimiert je Werk)
+2. Extraktion von .xslx-Dateien
+   - 1 Datei pro Seite
+   - 1 Zeile pro Textzeile
+3. Verteilung an je 2 Bearbeiter
+4. Import des Rücklaufs
+   - Textnormalisierung (automatische Nachkorrektur; optional)
+   - Double-Keying zur Qualitätskontrolle
+   - Konfliktbereinigung (manuelle Nachkorrektur; optional)
+5. Export Zeilen-GT
+   - Format für tesstrain/ocropus/kraken/…
+   - Publikation auf [Github](https://github.com/slub/slub_ocr_gt)
+6. Training und Experimente
 
 ---
 
@@ -183,6 +184,7 @@ class: part-slide
     * zahlreiche Diakritika
     * **keine** annähernd adäquaten Modelle vorhanden
 - Latein
+    * ...
 
 ---
 
@@ -215,21 +217,24 @@ class: part-slide
 # Annotationsumgebung
 
 - Excel / LibreOffice Calc
-  * Offline
-  * Rechtschreibkontrolle
-  * ...
+    * verbreitete, etablierte Software
+    * **Offline** verwendbar
+    * Rechtschreibkontrolle als Unterstützung
+    * keine zentrale Datenhaltung
 - 1 Tabelle pro Seite mit 1 Zeile pro Textzeile und Spalten für:
-  * ID (aus PAGE-XML)
-  * Text (aus OCR)
-  * Status (offen/fertig/fehlerhaft)
-  * Bild (aus Binarisierung und Zeilensegmentierung)  
-    Klick → Faksimile (DFG-Viewer)
+    * ID (aus XML)
+    * Text (aus OCR)
+    * Status (offen/fertig/fehlerhaft)
+    * Bild (aus Binarisierung und Zeilensegmentierung)
+    * Helferlein
+        + Klick → Faksimile (DFG-Viewer)
+        + Zeichentabelle als Kopiervorlage
 
 ---
 
 # Annotationsumgebung – Ansicht
 
-![screenshot](./img/excel-ocr-gt-annotation.png)
+<img src="img/excel-ocr-gt-annotation.png" width="400px" />
 
 ---
 
@@ -346,6 +351,12 @@ class: part-slide
 class: part-slide
 
 # Diskussion
+
+---
+
+# Diskussion
+
+- 
 
 ---
 
