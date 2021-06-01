@@ -47,11 +47,11 @@ count: false
 
 # Überblick
 
-- Prinzipien OCR
+- Einleitung
 - Datenvorbereitung
 - Transkription
 - Training
-- Diskussion
+- Zusammenfassung
 
 ---
 
@@ -63,11 +63,11 @@ count: false
 
 class: part-slide
 
-# Prinzipien OCR
+# Einleitung
 
 ---
 
-# Prinzipien OCR
+# Einleitung – Prinzipien OCR
 
 - Schritt 1: Zeilenerkennung
     + **regelbasierte** (Bildmorphologie) oder
@@ -85,7 +85,7 @@ class: part-slide
 
 ---
 
-# Prinzipien OCR
+# Einleitung – Prinzipien OCR
 
 - Schritt 2: Vektorisierung
     + **Skalierung** auf einheitliche Höhe
@@ -103,7 +103,7 @@ class: part-slide
 
 ---
 
-# Prinzipien OCR
+# Einleitung – Prinzipien OCR
 
 - Schritt 3: Textermittlung
     + **Übergangswahrscheinlichkeiten** zwischen Vektoren
@@ -126,7 +126,7 @@ den Nacht begegnen könnte, in Gnaden bewahren
 
 ---
 
-# Motivation
+# Einleitung – Motivation
 
 - resultierende Textqualität (auch) abhängig von Modellpassung
     * Modell: Wahrscheinlichkeitsverteilung über mgl. Zeichen
@@ -142,7 +142,7 @@ den Nacht begegnen könnte, in Gnaden bewahren
 
 ---
 
-# Ablauf
+# Einleitung – Ablauf
 
 0. Werkauswahl
 1. OCR-D-Workflow (manuell optimiert je Werk)
@@ -356,17 +356,22 @@ class: part-slide
 
 class: part-slide
 
-# Diskussion
+# Zusammenfassung
 
 ---
 
-# Diskussion
+# Zusammenfassung
 
 - vielversprechende Ergebnisse sowohl bei **Annotation** als auch **Training**
 - Erkenntnisse
     * gutes **Datenmanagement** nötig
     * eindeutige **Transkriptionsrichtlinien** erforderlich
     * kontinuierliche **Versorgung** mit neuen Werken wichtig
+- Perspektiven
+    * **systematische Experimente** zum OCR-Training
+        + Spannungfeld **Generik** vs. **Spezifik**
+    * Einbindung **bürgerwissenschaftlicher Kontexte** in die Datenproduktion
+    * Übertrag der Erkenntnisse auf die Erkennung **handschriftlicher Materialien**
 
 ---
 
