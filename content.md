@@ -234,7 +234,7 @@ class: part-slide
 
 # Annotationsumgebung – Ansicht
 
-<img src="img/excel-ocr-gt-annotation.png" width="400px" />
+<img src="img/excel-ocr-gt-annotation.png" width="800px" />
 
 ---
 
