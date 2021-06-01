@@ -144,20 +144,21 @@ den Nacht begegnen könnte, in Gnaden bewahren
 
 # Einleitung – Ablauf
 
-0. Werkauswahl
-1. OCR-D-Workflow (manuell optimiert je Werk)
+0. Werkauswahl (manuell)
+1. OCR-Workflow (manuell optimiert je Werk)
 2. Extraktion von .xslx-Dateien
    - 1 Datei pro Seite
    - 1 Zeile pro Textzeile
 3. Verteilung an je 2 Bearbeiter
-4. Import des Rücklaufs
+4. Transkription (manuelle Textkorrektur)
+5. Import des Rücklaufs
    - Textnormalisierung (automatische Nachkorrektur; optional)
-   - Double-Keying zur Qualitätskontrolle
+   - Double-Keying zur Qualitätskontrolle (automatisch)
    - Konfliktbereinigung (manuelle Nachkorrektur; optional)
-5. Export Zeilen-GT
+6. Export Zeilen-GT
    - Format für tesstrain/ocropus/kraken/…
    - Publikation auf [Github](https://github.com/slub/slub_ocr_gt)
-6. Training und Experimente
+7. Training und Experimente
 
 ---
 
@@ -177,14 +178,14 @@ class: part-slide
     * bisher wenig beachtet
     * erstaunliche Vielfalt von Schriftarten
     * historische Zeichen und Diakritika
-    * Latein
+    * Latein <!-- "lat" ohne ſ und hist. Abk.zeichen und Ligaturen unbrauchbar -->
         + hoher Anteil im Datenbestand
-        + fast immer in Antiqa gesetzt
+        + immer in Antiqua gesetzt
 - Fraktur 20. Jahrhundert
     * teilweise große Abweichungen zur „Standardfraktur“
     * Festschriften und Schmuckdrucke
 - Sorbisch (vgl. [Würzner und Böhmak 2019](https://zenodo.org/record/3387369#.YLY43nVfjCM))
-    * zahlreiche Diakritika (deutsch, polnisch und slowakisch) sowie ß
+    * zahlreiche Diakritika (deutsch, polnisch und slowakisch) sowie `ß`
     * **keine** annähernd adäquaten Modelle vorhanden
 
 ---
@@ -212,6 +213,19 @@ class: part-slide
 
 # Datenvorbereitung – Ergebnisse
 
+* typische Defizite sichtbar
+| **Antiqua** | **Fraktur** | **Sorbisch** |
+| --- | --- | --- |
+| `[fl{]` → `ſ` <br/> Ligaturen <br/> `.` ←→ `,` <br/> `[A-Z]` → `[a-z]` | `[fl]` → `ſ` <br/> `[äöü]` → `[aͤoͤuͤ]` <br/> `[-=:–]` → `⸗` <br/> `[BSC1]` → `[VFTI]` |  `é` → `[ćč]` <br/> `s` → `š` <br/> `[öèéeoͤ]` → `ě` <br/> `[Zz]` → `ž` <br/> `[ftr]` → `ř` <br/> `t` → `ł` |
+| ![Beispielbild Cosmogonia](cosmogonia_FILE_0013_GT_region0002_region0002_line0002.bin.png) | ![Beispielbild Hottenroth](hottenroth_jugenderinnerungen_FILE_0010_GT_region0002_region0002_line0016.bin.png) | |
+| gedachten Kette mitgetheilte<u> </u>, er<u>f</u>te Ausflus des ele<u>&</u>tri<u>f</u>chen | Stiege gelangen konnte. Hier war aus Brettern ein <u>S</u>u<u>f-</u> | |
+| ![Beispielbild Kopp](kopp_molecularwelt_FILE_0015_GT_region0000_region0000_line0021.bin.png) | ![Beispielbild Loskiel](loskiel_FILE_0007_GT_Page1_Block3_Page1_Block3_line0003.bin.png) | |
+| be<u>ff</u>ere Bezeichnung <u>ZU</u> <u>f</u>uchen, welche dem von uns <u>J</u>etzt | Br<u>ü</u>der<u> - </u>Unit<u>ä</u>t iſt die unter die Indianer in | |
+| ![Beispielbild Marshall](marshall_tiefsee_FILE_0013_GT_region0006_region0006_line0005.bin.png) | ![Beispielbild Ryff](ryff_krankenkochbuch_FILE_0016_GT_Page1_Block3_Page1_Block3_line0012.bin.png) | |
+| Strömungen, <u>CS</u> atmet mit <u>f</u>einer <u>3</u>randung und mit dem Spiel <u>f</u>einer | <u>S</u>altun<u>gi</u>n <u>p</u>eſtilentziſchem luff<u>e</u>. 212 | |
+| ![Beispielbild Wallerius](wallerius_elementa-metallurgiae_FILE_0014_GT_region0002_region0002_line0011.bin.png) | ![Beispielbild Thüringische](thüringische-studien_FILE_0011_GT_region0003_region0003_line0014.bin.png) | |
+| p<u>ufl</u>ula<u>v</u>e qu<u>afl</u>um<u>.</u> metallicum innocentia, bone- | endlich in den Neubau der Landes<u>-</u>(je<u>ß</u>t Staats<u>-</u>)Bank gebracht und nun | |
+
 ---
 
 class: part-slide
@@ -228,11 +242,10 @@ class: part-slide
 # Transkription – Annotationsumgebung
 
 - Excel / LibreOffice Calc
-    * verbreitete, etablierte Software
-    * **offline** verwendbar
+    * verbreitete Software (keine Installation und Schulung nötig)
+    * **offline** verwendbar, keine zentrale Datenhaltung
     * Rechtschreibkontrolle als Unterstützung
     * Symboltabelle für Sonderzeichen
-    * keine zentrale Datenhaltung
 - 1 Tabelle pro Seite mit 1 Zeile pro Textzeile und Spalten für:
     * ID (aus XML)
     * Text (aus OCR)
@@ -273,7 +286,7 @@ count: false
 </center>
 
 ---
-
+Interpunktion
 count: false
 
 # Transkription – Richtlinien
