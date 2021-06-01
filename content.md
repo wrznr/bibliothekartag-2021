@@ -149,14 +149,13 @@ den Nacht begegnen könnte, in Gnaden bewahren
 2. Extraktion von .xslx-Dateien
    - 1 Datei pro Seite
    - 1 Zeile pro Textzeile
-3. Verteilung an je 2 Bearbeiter
 4. Transkription (manuelle Textkorrektur)
+   - Verteilung an je 2 Bearbeiter
 5. Import des Rücklaufs
    - Textnormalisierung (automatische Nachkorrektur; optional)
    - Double-Keying (automatische Qualitätskontrolle)
    - Konfliktbereinigung (manuelle Nachkorrektur; optional)
-6. Export Zeilen-GT
-   - Format für tesstrain/ocropus/kraken/…
+6. Export als Trainingsdaten
    - Publikation auf [Github](https://github.com/slub/slub_ocr_gt)
 7. Training und Experimente
 
@@ -185,7 +184,7 @@ class: part-slide
     * teilweise große Abweichungen zur „Standardfraktur“
     * Festschriften und Schmuckdrucke
 - Sorbisch (vgl. [Würzner und Böhmak 2019](https://zenodo.org/record/3387369#.YLY43nVfjCM))
-    * zahlreiche Diakritika (deutsch, polnisch und slowakisch) sowie `ß`
+    * zahlreiche (polnische, tschechische und deutsche) Diakritika sowie `ß`
     * **keine** annähernd adäquaten Modelle vorhanden
 
 ---
@@ -214,6 +213,7 @@ class: part-slide
 # Datenvorbereitung – Ergebnisse
 
 * typische Defizite sichtbar
+
 | **Antiqua** | **Fraktur** | **Sorbisch** |
 | --- | --- | --- |
 | `[fl{]` → `ſ` <br/> Ligaturen <br/> `.` ←→ `,` <br/> `[A-Z]` → `[a-z]` | `[fl]` → `ſ` <br/> `[äöü]` → `[aͤoͤuͤ]` <br/> `[-=:–]` → `⸗` <br/> `[BSC1]` → `[VFTI]` |  `é` → `[ćč]` <br/> `s` → `š` <br/> `[öèéeoͤ]` → `ě` <br/> `[Zz]` → `ž` <br/> `[ftr]` → `ř` <br/> `t` → `ł` |
@@ -242,7 +242,7 @@ class: part-slide
 # Transkription – Annotationsumgebung
 
 - Excel / LibreOffice Calc
-    * verbreitete Software (keine Installation und Schulung nötig)
+    * verbreitete Software (keine Installation oder Schulung nötig)
     * **offline** verwendbar, keine zentrale Datenhaltung
     * Rechtschreibkontrolle als Unterstützung
     * Symboltabelle für Sonderzeichen
@@ -422,14 +422,15 @@ class: part-slide
 
 # Zusammenfassung
 
-- vielversprechende Ergebnisse sowohl bei **Annotation** als auch **Training**
+- vielversprechende Ergebnisse 
+    * sowohl bei **Transkription** als auch **Training**
 - Erkenntnisse
     * gutes **Datenmanagement** nötig
     * eindeutige **Transkriptionsrichtlinien** erforderlich
     * kontinuierliche **Versorgung** mit neuen Werken wichtig
 - Perspektiven
     * **systematische Experimente** zum OCR-Training
-        + Spannungfeld **Generik** vs. **Spezifik**
+        + Spannungfeld **generische** vs. **spezifische** Modelle
     * Einbindung **bürgerwissenschaftlicher Kontexte** in die Datenproduktion
     * Übertrag der Erkenntnisse auf die Erkennung **handschriftlicher Materialien**
 
