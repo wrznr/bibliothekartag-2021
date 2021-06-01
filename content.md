@@ -59,6 +59,8 @@ class: part-slide
 
 # Vielen Dank für Ihre Beteiligung!
 
+![danke](./img/danke.png)
+
 ---
 
 class: part-slide
@@ -218,7 +220,7 @@ class: part-slide
 
 - Excel / LibreOffice Calc
     * verbreitete, etablierte Software
-    * **Offline** verwendbar
+    * **offline** verwendbar
     * Rechtschreibkontrolle als Unterstützung
     * keine zentrale Datenhaltung
 - 1 Tabelle pro Seite mit 1 Zeile pro Textzeile und Spalten für:
@@ -234,7 +236,7 @@ class: part-slide
 
 # Annotationsumgebung – Ansicht
 
-<img src="img/excel-ocr-gt-annotation.png" width="800px" />
+![screenshot](./img/excel-ocr-gt-annotation.png)
 
 ---
 
