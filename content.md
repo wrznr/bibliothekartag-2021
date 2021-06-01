@@ -189,6 +189,12 @@ class: part-slide
 
 ---
 
+# Datenvorbereitung – Werkauswahl
+
+![screenshot](./img/kollaborative-annotation-übersicht.png)
+
+---
+
 # Datenvorbereitung – OCR-Workflow
 
 - Konfiguration und Prozessierung mit [OCR-D](https://ocr-d.de)
@@ -251,9 +257,44 @@ class: part-slide
   * häufige Eingabe von Sonderzeichen (`ſ ꝛ aͤ oͤ uͤ  — ⸗` …)
   * in der Praxis auftretende Grenzfälle bzw. Lücken
 
-<!-- Intranetdialog -->
+---
 
-...
+ count: false
+
+# Transkription – Richtlinien
+
+- Orientierung an [DTA](https://www.deutschestextarchiv.de/doku/basisformat/transkription.html) / [OCR-D](https://ocr-d.de/de/gt-guidelines/trans/transkription.html) **GT-Level 2**  
+  * bester Kompromiss aus Aufwand und Genauigkeit
+  * häufige Eingabe von Sonderzeichen (`ſ ꝛ aͤ oͤ uͤ  — ⸗` …)
+  * in der Praxis auftretende Grenzfälle bzw. Lücken
+
+![screenshot](./img/kollaborative-annotation-kommentar4.png)
+
+---
+
+ count: false
+
+# Transkription – Richtlinien
+
+- Orientierung an [DTA](https://www.deutschestextarchiv.de/doku/basisformat/transkription.html) / [OCR-D](https://ocr-d.de/de/gt-guidelines/trans/transkription.html) **GT-Level 2**  
+  * bester Kompromiss aus Aufwand und Genauigkeit
+  * häufige Eingabe von Sonderzeichen (`ſ ꝛ aͤ oͤ uͤ  — ⸗` …)
+  * in der Praxis auftretende Grenzfälle bzw. Lücken
+
+![screenshot](./img/kollaborative-annotation-kommentar2.png)
+
+---
+
+ count: false
+
+# Transkription – Richtlinien
+
+- Orientierung an [DTA](https://www.deutschestextarchiv.de/doku/basisformat/transkription.html) / [OCR-D](https://ocr-d.de/de/gt-guidelines/trans/transkription.html) **GT-Level 2**  
+  * bester Kompromiss aus Aufwand und Genauigkeit
+  * häufige Eingabe von Sonderzeichen (`ſ ꝛ aͤ oͤ uͤ  — ⸗` …)
+  * in der Praxis auftretende Grenzfälle bzw. Lücken
+
+![screenshot](./img/kollaborative-annotation-kommentar5.png)
 
 ---
 
