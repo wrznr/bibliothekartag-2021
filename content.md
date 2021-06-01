@@ -246,7 +246,7 @@ class: part-slide
 
 # Transkription – Annotationsumgebung
 
-![screenshot](./img/excel-ocr-gt-annotation.png)
+![screenshot](./img/excel-ocr-gt-annotation_cropped.png)
 
 ---
 
@@ -373,10 +373,10 @@ class: part-slide
   – je Werk
 - Gruppierung der Dateipaare (werkspezifisch vs. generisch)  
   – per Symlinks
-- Modellanpassung (*Finetuning*) vs. grundständiges Training
-- Parameterwahl 
-  – Basismodell, Lernrate und Iterationen
-- <span style="color:gray">Augmentierung (für robustere Modelle) 
+- Trainingsregime  
+  – Modellanpassung (*Finetuning*) vs. grundständiges Training,
+  Parameterwahl (Basismodell, Lernrate, Iterationen)
+- <span style="color:gray">Augmentierung (für robustere Modelle)  
   – Rauschen, Binarisierung, Drehung, Verzerrung</span>
 
 ---
