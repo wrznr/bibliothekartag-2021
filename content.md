@@ -47,6 +47,7 @@ count: false
 
 # Überblick
 
+- zeilenbasierte OCR
 - Datenvorbereitung
 - Transkription
 - Training
@@ -72,6 +73,12 @@ count: false
 5. Export Zeilen-GT
    - Format für tesstrain/ocropus/kraken/…
    - Publikation auf [Github](https://github.com/slub/slub_ocr_gt)
+
+---
+
+class: part-slide
+
+# Zeilenbasierte OCR
 
 ---
 
