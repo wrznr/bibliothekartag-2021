@@ -222,11 +222,12 @@ class: part-slide
 
 - Modelle für Tesseract  
   – mit [tesstrain](https://github.com/tesseract-ocr/tesstrain)
-- randomisierte 10%-Aufteilung (Prüf- vs Lernstichprobe)  
+- randomisierte 10%-Aufteilung (Test- und Trainingsdaten)  
   – je Werk
 - Gruppierung der Dateipaare (werkspezifisch vs. generisch)  
   – per Symlinks
-- Parameterwahl (Finetuning vs. Baseline)  
+- Modellanpassung (*Finetuning*) vs. grundständiges Training
+- Parameterwahl 
   – Basismodell, Lernrate und Iterationen
 - Augmentierung (für robustere Modelle)  
   – Rauschen, Binarisierung, Drehung, Verzerrung
@@ -239,8 +240,11 @@ class: part-slide
 - generisches Finetuning (nur Fraktur)
 - generisches Finetuning (nur Antiqua)
 - generisches Finetuning (alles)
-- generisches Baseline-Training (alles)
-- generisches Baseline-Training (alles + GT4HistOCR)
+- grundständiges Training (mit weiteren Daten)
+
+---
+
+# Training – werkspezifisches Finetuning
 
 | **Werk** | **CER vorher** | **CER nachher** |
 | --- | --- | --- |
@@ -248,6 +252,11 @@ class: part-slide
 | ... | ... | ... |
 | gesamt | ?? | ?? |
 
+---
+
+class: part-slide
+
+# Diskussion
 
 ---
 
