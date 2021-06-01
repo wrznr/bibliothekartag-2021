@@ -47,33 +47,18 @@ count: false
 
 # Überblick
 
-- Section 1
-  + Subsection 1
-- Section 2
+- Datenvorbereitung
+- Transkription
+- Training
+- Diskussion
 
 ---
 
-class: part-slide
-count: false
-
-# Topic 1
+# Danksagung
 
 ---
 
-class: part-slide
-
-# Datenbereitstellung
-
-- Vorgehen
-  * OCR-Workflow
-  * Annotationsumgebung
-  * Transkriptionsrichtlinien
-  * Textnormalisierung
-- Ergebnisse
-
----
-
-## Vorgehen Datenbereitstellung
+# Überblick
 
 1. OCR-D-Workflow (manuell optimiert je Werk)
 2. Extraktion von .xslx-Dateien
@@ -90,7 +75,21 @@ class: part-slide
 
 ---
 
-### OCR-Workflow
+class: part-slide
+
+# Datenvorbereitung
+
+- Werkauswahl
+- OCR-Workflow
+- Ergebnisse
+
+---
+
+# Werkauswahl
+
+---
+
+# OCR-Workflow
 
 - Konfiguration und Prozessierung mit [OCR-D](https://ocr-d.de)
 - meist:
@@ -105,7 +104,18 @@ class: part-slide
 
 ---
 
-### Annotationsumgebung
+class: part-slide
+
+# Transkription
+
+- Annotationsumgebung
+- Transkriptionsrichtlinien
+- Textnormalisierung
+- Ergebnisse
+
+---
+
+# Annotationsumgebung
 
 - Excel / LibreOffice Calc
 - 1 Tabelle pro Seite mit 1 Zeile pro Textzeile und Spalten für:
@@ -118,7 +128,7 @@ class: part-slide
 
 ---
 
-### Transkriptionsrichtlinien
+# Transkriptionsrichtlinien
 
 - Orientierung an [DTA](https://www.deutschestextarchiv.de/doku/basisformat/transkription.html) / [OCR-D](https://ocr-d.de/de/gt-guidelines/trans/transkription.html) **GT-Level 2**  
   * bester Kompromiss aus Aufwand und Genauigkeit
@@ -129,7 +139,7 @@ class: part-slide
 
 ---
 
-### Textnormalisierung
+# Textnormalisierung
 
 - automatische Ersetzung bestimmter Muster zur Bereinigung von
   * häufigen Flüchtigkeitsfehlern
@@ -145,7 +155,7 @@ class: part-slide
 
 ---
 
-## Ergebnisse Datenbereitstellung
+# Ergebnisse Datenbereitstellung
 
 .cols[
 .fifty[
@@ -187,7 +197,7 @@ class: part-slide
 
 ---
 
-## Vorgehen Training
+# Training – Vorgehen
 
 - Modelle für Tesseract  
   – mit [tesstrain](https://github.com/tesseract-ocr/tesstrain)
@@ -202,7 +212,7 @@ class: part-slide
 
 ---
 
-## Ergebnisse Training
+# Training – Ergebnisse
 
 - werkspezifisches Finetuning
 - generisches Finetuning (nur Fraktur)
