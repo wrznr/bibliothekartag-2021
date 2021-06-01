@@ -55,12 +55,15 @@ count: false
 
 ---
 
-# Danksagung
+class: part-slide
+
+# Vielen Dank für Ihre Beteiligung!
 
 ---
 
 # Überblick
 
+0. Werkauswahl
 1. OCR-D-Workflow (manuell optimiert je Werk)
 2. Extraktion von .xslx-Dateien
    - 1 Datei pro Seite
@@ -83,6 +86,80 @@ class: part-slide
 
 ---
 
+# Wie funktioniert's?
+
+- Schritt 1: Zeilenerkennung
+    + **regelbasierte** (Bildmorphologie) oder
+    + **datengetriebene** Verfahren (e.g. Pixelklassifikation)
+
+<center>
+<img src="img/nbg_region.png" width="400px" />
+</center>
+<center>
+<p>↓</p>
+</center>
+<center>
+<img src="img/nbg_lines.png" width="400px" />
+</center>
+
+---
+
+# Wie funktioniert's?
+
+- Schritt 2: Vektorisierung
+    + **Skalierung** auf einheitliche Höhe
+    + **Unterteilung** in 1pixel-breite Streifen
+
+<center>
+<img src="img/nbg_lines.png" width="400px" />
+</center>
+<center>
+<p>↓</p>
+</center>
+<center>
+<img src="img/nbg_grid.png" width="400px" />
+</center>
+
+---
+
+# Wie funktioniert's?
+
+- Schritt 3: Textermittlung
+    + **Übergangswahrscheinlichkeiten** zwischen Vektoren
+    + Rückgriff auf (offline) trainiertes **Modell**
+
+<center>
+<img src="img/nbg_grid.png" width="400px" />
+</center>
+<center>
+<p>↓</p>
+</center>
+<center>
+<p style="display: inline-block; text-align: left; font-size: 16pt.; font-style: italic;">
+oberwähntem Tage mancher sorgliche Gedanke auf,<br/>
+&amp; wir seufzten öfters zum Heiland, daß Er uns<br/>
+vor allem Schaden, der uns etwa in der folgen-<br/>
+den Nacht begegnen könnte, in Gnaden bewahren
+</p>
+</center>
+
+---
+
+# Wie funktioniert's?
+
+- resultierende Textqualität (auch) abhängig von Modellpassung
+    * Modell: Wahrscheinlichkeitsverteilung über mgl. Zeichen
+- mitgelieferte Modelle häufig ungeeignet für historische Vorlagen
+    * unzureichende Passung zwischen Trainings- und Anwendungsdaten
+    * synthetisches Training
+- Initiativen zur Erhebung von Trainingsdaten für historische Vorlagen
+    * `GT4HistOCR` ([Springmann et al. 2018](https://arxiv.org/ftp/arxiv/papers/1809/1809.05501.pdf))
+    * Fibeln 19. Jahrhundert ([Weil et al. 2020](https://github.com/UB-Mannheim/Fibeln))
+    * NewsEye Austraian Newspapers 19th C. ([Mühlberger und Hackl 2019](https://zenodo.org/record/3387369#.YLY43nVfjCM))
+- starker Fokus auf Fraktur 19. Jahrhundert
+
+---
+
 class: part-slide
 
 # Datenvorbereitung
@@ -94,6 +171,18 @@ class: part-slide
 ---
 
 # Werkauswahl
+
+- historische Antiqua
+    * bisher wenig beachtet
+    * erstaunliche Vielfalt von Schriftarten
+    * historische Zeichen und Diakritika
+- Fraktur 20. Jahrhundert
+    * teilweise große Abweichungen zur „Standardfraktur“
+    * Festschriften und Schmuckdrucke
+- Sorbisch (vgl. [Würzner und Böhmak 2019](https://zenodo.org/record/3387369#.YLY43nVfjCM))
+    * zahlreiche Diakritika
+    * **keine** annähernd adäquaten Modelle vorhanden
+- Latein
 
 ---
 
