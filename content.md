@@ -55,8 +55,6 @@ count: false
 
 ---
 
-class: part-slide
-
 # Vielen Dank für Ihre Beteiligung!
 
 ![danke](./img/danke.png)
