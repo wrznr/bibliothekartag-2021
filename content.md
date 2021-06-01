@@ -136,7 +136,7 @@ den Nacht begegnen könnte, in Gnaden bewahren
 - Erhebung von Trainingsdaten für historische Vorlagen
     * `GT4HistOCR` ([Springmann et al. 2018](https://arxiv.org/ftp/arxiv/papers/1809/1809.05501.pdf))
     * Fibeln 19. Jahrhundert ([Weil et al. 2020](https://github.com/UB-Mannheim/Fibeln))
-    * NewsEye Austraian Newspapers 19th C. ([Mühlberger und Hackl 2019](https://zenodo.org/record/3387369#.YLY43nVfjCM))
+    * NewsEye Austrian Newspapers 19th C. ([Mühlberger und Hackl 2019](https://zenodo.org/record/3387369#.YLY43nVfjCM))
 - starker Fokus auf Fraktur 19. Jahrhundert
 - **zusätzliche Trainingsdaten nötig**
 
@@ -177,14 +177,15 @@ class: part-slide
     * bisher wenig beachtet
     * erstaunliche Vielfalt von Schriftarten
     * historische Zeichen und Diakritika
+    * Latein
+        + hoher Anteil im Datenbestand
+        + fast immer in Antiqa gesetzt
 - Fraktur 20. Jahrhundert
     * teilweise große Abweichungen zur „Standardfraktur“
     * Festschriften und Schmuckdrucke
 - Sorbisch (vgl. [Würzner und Böhmak 2019](https://zenodo.org/record/3387369#.YLY43nVfjCM))
-    * zahlreiche Diakritika
+    * zahlreiche Diakritika (deutsch, polnisch und slowakisch) sowie ß
     * **keine** annähernd adäquaten Modelle vorhanden
-- Latein
-    * ...
 
 ---
 
@@ -200,6 +201,10 @@ class: part-slide
   * Erkennung: [Tesseract](https://github.com/OCR-D/ocrd_tesserocr) (neuronal)
 - Anpassung je nach Material und Sprachen
 - Rückgriff auf existierende, bestpassende OCR-Modelle
+
+---
+
+# Ergebnisbeispiele
 
 ---
 
@@ -220,6 +225,7 @@ class: part-slide
     * verbreitete, etablierte Software
     * **offline** verwendbar
     * Rechtschreibkontrolle als Unterstützung
+    * Symboltabelle für Sonderzeichen
     * keine zentrale Datenhaltung
 - 1 Tabelle pro Seite mit 1 Zeile pro Textzeile und Spalten für:
     * ID (aus XML)
@@ -243,7 +249,7 @@ class: part-slide
 - Orientierung an [DTA](https://www.deutschestextarchiv.de/doku/basisformat/transkription.html) / [OCR-D](https://ocr-d.de/de/gt-guidelines/trans/transkription.html) **GT-Level 2**  
   * bester Kompromiss aus Aufwand und Genauigkeit
   * häufige Eingabe von Sonderzeichen (`ſ ꝛ aͤ oͤ uͤ  — ⸗` …)
-  * viele verbleibende Unklarheiten...
+  * in der Praxis auftretende Grenzfälle bzw. Lücken
 
 <!-- Intranetdialog -->
 
@@ -276,8 +282,8 @@ class: part-slide
 - Umfang (vorläufig):
   * 18 Bearbeiter, ~200 Emails
   * 16 Werke, 10 mit Double-Keying  
-    → ` 6473` Seiten (vollständig)  
-    → `  477` Seiten (vorausgewählt)  
+    → ` 6473` Seiten (vollständig)  
+    → `  477` Seiten (vorausgewählt)  
     → `20808` Zeilen (vorausgewählt)  
     → `14909` Zeilen (korrigiert)  
     → `13335` Zeilen (übereinstnd.)
@@ -293,10 +299,10 @@ class: part-slide
     * **97.2%** Zeichen (= 2.8% CER)
     * nur Fraktur
         * `GT4HistOCR+frk+Fraktur`
-        * 98.8% Zeichen (= 1.2% CER)  
+        * **98.8%** Zeichen (= 1.2% CER)  
     * nur Antiqua
         * `deu+Latin`
-        * 96.2% Zeichen (= 3.8% CER)  
+        * **96.2%** Zeichen (= 3.8% CER)  
 
 ]
 ]
@@ -323,8 +329,8 @@ class: part-slide
 - Modellanpassung (*Finetuning*) vs. grundständiges Training
 - Parameterwahl 
   – Basismodell, Lernrate und Iterationen
-- Augmentierung (für robustere Modelle)  
-  – Rauschen, Binarisierung, Drehung, Verzerrung
+- <span style="color:gray">Augmentierung (für robustere Modelle) 
+  – Rauschen, Binarisierung, Drehung, Verzerrung</span>
 
 ---
 
