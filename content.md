@@ -242,7 +242,7 @@ class: part-slide
       <td><img src="./img/ryff_krankenkochbuch_FILE_0016_GT_Page1_Block3_Page1_Block3_line0012.bin.png" alt="Beispielbild Ryff"/></td>
     </tr>
     <tr>
-      <td style="font-size:0.6em">Strömungen, <u>CS</u> atmet mit <u>f</u>einer <u>3</u>randung und mit dem Spiel <u>f</u>einer</td>
+      <td style="font-size:0.9em">Strömungen, <u>CS</u> atmet mit <u>f</u>einer <u>3</u>randung und mit dem Spiel <u>f</u>einer</td>
       <td><u>S</u>altun<u>gi</u>n <u>p</u>eſtilentziſchem luff<u>e</u>. 212</td>
     </tr>
     <tr>
@@ -251,7 +251,7 @@ class: part-slide
     </tr>
     <tr>
       <td>p<u>ufl</u>ula<u>v</u>e qu<u>afl</u>um<u>.</u> metallicum innocentia, bone-</td>
-      <td>endlich in den Neubau der Landes<u>-</u>(je<u>ß</u>t Staats<u>-</u>)Bank gebracht und nun</td>
+      <td style="font-size:0.9em">endlich in den Neubau der Landes<u>-</u>(je<u>ß</u>t Staats<u>-</u>)Bank gebracht und nun</td>
     </tr>
   </tbody>
 </table> 
@@ -377,11 +377,11 @@ count: false
 - Umfang (vorläufig):
   * 18 Bearbeiter, ~200 Emails
   * 16 Werke, 10 mit Double-Keying  
-    → <span> 6473</span> Seiten (vollständig)  
-    → <span>  477</span> Seiten (vorausgewählt)  
-    → <span>20808</span> Zeilen (vorausgewählt)  
-    → <span>14909</span> Zeilen (korrigiert)  
-    → <span>13335</span> Zeilen (übereinstnd.)
+    → &nbsp;6473 Seiten (vollständig)  
+    → &nbsp;&nbsp;477 Seiten (vorausgewählt)  
+    → 20808 Zeilen (vorausgewählt)  
+    → 14909 Zeilen (korrigiert)  
+    → 13335 Zeilen (übereinstnd.)
     
 ]
 
@@ -456,8 +456,6 @@ class: part-slide
 | `bogusławski1884_nationalgeschichte` | Antiqua | 7.5% | 0.60% |
 | `kopp1886_molecularwelt` | Antiqua | 5.0% | 0.01% |
 | `marshall1888_tiefsee` | Antiqua | 8.5% | 0.27% |
-| `schilling1892_journal-gas-wasser` | Antiqua | 0.9% | 0.20% |
-| `arch-hist-sax_1910` | Antiqua | 1.8% | 0.01% |
 | … | … | … | … |
 
 ]
@@ -473,6 +471,8 @@ count: false
 | **Werk** | **Schriftart** | **CER vorher** | **CER nachher** |
 | --- | --- | --- | --- |
 | … | … | … | … |
+| `schilling1892_journal-gas-wasser` | Antiqua | 0.9% | 0.20% |
+| `arch-hist-sax_1910` | Antiqua | 1.8% | 0.01% |
 | `katalogkunstgewerbeausstellung_1906` | Antiqua | 1.4% | 0.20% |
 | `hottenroth1925_jugenderinnerungen` | Fraktur | 0.6% | 0.01% |
 | `schmidt1936_thueringische-studien` | Fraktur | 0.6% | 0.02% |
