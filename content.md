@@ -375,7 +375,7 @@ count: false
 .fifty[
      
 - Umfang (vorläufig):
-  * 18 Bearbeiter, ~200 Emails
+  * 18 Bearbeitende, ~200 Emails
   * 16 Werke, 10 mit Double-Keying  
     → &nbsp;6473 Seiten (vollständig)  
     → &nbsp;&nbsp;477 Seiten (vorausgewählt)  
