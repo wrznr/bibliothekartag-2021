@@ -129,35 +129,35 @@ den Nacht begegnen könnte, in Gnaden bewahren
 # Einleitung – Motivation
 
 - resultierende Textqualität (auch) abhängig von Modellpassung
-    * Modell: Wahrscheinlichkeitsverteilung über mgl. Zeichen
+    * Modell: Wahrscheinlichkeitsverteilung über alle Zeichen
 - mitgelieferte Modelle häufig ungeeignet für historische Vorlagen
     * unzureichende Passung zwischen Trainings- und Anwendungsdaten
     * synthetisches Training
-- Erhebung von Trainingsdaten für historische Vorlagen
+- Erhebung von Trainingsdaten für historische Vorlagen  
+  – starker Fokus auf Fraktur 19. Jahrhundert:
     * `GT4HistOCR` ([Springmann et al. 2018](https://arxiv.org/ftp/arxiv/papers/1809/1809.05501.pdf))
     * Fibeln 19. Jahrhundert ([Weil et al. 2020](https://github.com/UB-Mannheim/Fibeln))
     * NewsEye Austrian Newspapers 19th C. ([Mühlberger und Hackl 2019](https://zenodo.org/record/3387369#.YLY43nVfjCM))
-- starker Fokus auf Fraktur 19. Jahrhundert
 - **zusätzliche Trainingsdaten nötig**
 
 ---
 
-# Einleitung – Ablauf
+# Einleitung – Arbeitsablauf
 
-0. Werkauswahl
-1. OCR-D-Workflow (manuell optimiert je Werk)
+0. Werkauswahl (manuell)
+1. OCR-Workflow (manuell optimiert je Werk)
 2. Extraktion von .xslx-Dateien
    - 1 Datei pro Seite
    - 1 Zeile pro Textzeile
-3. Verteilung an je 2 Bearbeiter
-4. Import des Rücklaufs
+4. Transkription (manuelle Textkorrektur)
+   - Verteilung an je 2 Bearbeiter
+5. Import des Rücklaufs
    - Textnormalisierung (automatische Nachkorrektur; optional)
-   - Double-Keying zur Qualitätskontrolle
+   - Double-Keying (automatische Qualitätskontrolle)
    - Konfliktbereinigung (manuelle Nachkorrektur; optional)
-5. Export Zeilen-GT
-   - Format für tesstrain/ocropus/kraken/…
+6. Export als Trainingsdaten
    - Publikation auf [Github](https://github.com/slub/slub_ocr_gt)
-6. Training und Experimente
+7. Training und Experimente
 
 ---
 
@@ -177,14 +177,14 @@ class: part-slide
     * bisher wenig beachtet
     * erstaunliche Vielfalt von Schriftarten
     * historische Zeichen und Diakritika
-    * Latein
-        + hoher Anteil im Datenbestand
-        + fast immer in Antiqa gesetzt
+    * Latein <!-- "lat" ohne ſ und hist. Abk.zeichen und Ligaturen unbrauchbar -->
+        + hoher Anteil im Datenbestand <!-- 3 Werke von 20! -->
+        + immer in Antiqua gesetzt
 - Fraktur 20. Jahrhundert
     * teilweise große Abweichungen zur „Standardfraktur“
     * Festschriften und Schmuckdrucke
 - Sorbisch (vgl. [Würzner und Böhmak 2019](https://zenodo.org/record/3387369#.YLY43nVfjCM))
-    * zahlreiche Diakritika (deutsch, polnisch und slowakisch) sowie ß
+    * zahlreiche (polnische, tschechische und deutsche) Diakritika sowie `ß`
     * **keine** annähernd adäquaten Modelle vorhanden
 
 ---
@@ -212,6 +212,55 @@ class: part-slide
 
 # Datenvorbereitung – Ergebnisse
 
+* typische Defizite sichtbar:
+
+<table>
+  <thead><tr><th><strong>Antiqua</strong></th><th><strong>Fraktur</strong></th></tr></thead>
+  <tbody style="font-size:0.7em">
+    <tr>
+      <td><center><code class="remark-inline-code">[fl{]</code> → <code class="remark-inline-code">ſ</code> <br> Ligaturen <br> <code class="remark-inline-code">.</code> ←→ <code class="remark-inline-code">,</code> <br> <code class="remark-inline-code">[A-Z]</code> → <code class="remark-inline-code">[a-z]</code></center></td>
+      <td><center><code class="remark-inline-code">[fl]</code> → <code class="remark-inline-code">ſ</code> <br> <code class="remark-inline-code">äöü</code> → <code class="remark-inline-code">aͤoͤuͤ</code> <br> <code class="remark-inline-code">[-=:–]</code> → <code class="remark-inline-code">⸗</code> <br> <code class="remark-inline-code">BSC1</code> → <code class="remark-inline-code">VFTI</code></center></td>
+    </tr>
+    <tr>
+      <td><img src="./img/cosmogonia_FILE_0013_GT_region0002_region0002_line0002.bin.png" alt="Beispielbild Cosmogonia"/></td>
+      <td><img src="./img/hottenroth_jugenderinnerungen_FILE_0010_GT_region0002_region0002_line0016.bin.png" alt="Beispielbild Hottenroth"/></td>
+    </tr>
+    <tr>
+      <td>gedachten Kette mitgetheilte<u> </u>, er<u>f</u>te Ausflus des ele<u>&</u>tri<u>f</u>chen</td>
+      <td>Stiege gelangen konnte. Hier war aus Brettern ein <u>S</u>u<u>f-</u></td>
+    </tr>
+    <tr>
+      <td><img src="./img/kopp_molecularwelt_FILE_0015_GT_region0000_region0000_line0021.bin.png" alt="Beispielbild Kopp"/></td>
+      <td><img src="./img/loskiel_FILE_0007_GT_Page1_Block3_Page1_Block3_line0003.bin.png" alt="Beispielbild Loskiel"/></td>
+    </tr>
+    <tr>
+      <td>be<u>ff</u>ere Bezeichnung <u>ZU</u> <u>f</u>uchen, welche dem von uns <u>J</u>etzt</td>
+      <td>Br<u>ü</u>der<u> - </u>Unit<u>ä</u>t iſt die unter die Indianer in</td>
+    </tr>
+    <tr>
+      <td><img src="./img/marshall_tiefsee_FILE_0013_GT_region0006_region0006_line0005.bin.png" alt="Beispielbild Marshall"/></td>
+      <td><img src="./img/ryff_krankenkochbuch_FILE_0016_GT_Page1_Block3_Page1_Block3_line0012.bin.png" alt="Beispielbild Ryff"/></td>
+    </tr>
+    <tr>
+      <td style="font-size:0.9em">Strömungen, <u>CS</u> atmet mit <u>f</u>einer <u>3</u>randung und mit dem Spiel <u>f</u>einer</td>
+      <td><u>S</u>altun<u>gi</u>n <u>p</u>eſtilentziſchem luff<u>e</u>. 212</td>
+    </tr>
+    <tr>
+      <td><img src="./img/wallerius_elementa-metallurgiae_FILE_0014_GT_region0002_region0002_line0011.bin.png" alt="Beispielbild Wallerius"/></td>
+      <td><img src="./img/thüringische-studien_FILE_0011_GT_region0003_region0003_line0014.bin.png" alt="Beispielbild Thüringische"/></td>
+    </tr>
+    <tr>
+      <td>p<u>ufl</u>ula<u>v</u>e qu<u>afl</u>um<u>.</u> metallicum innocentia, bone-</td>
+      <td style="font-size:0.9em">endlich in den Neubau der Landes<u>-</u>(je<u>ß</u>t Staats<u>-</u>)Bank gebracht und nun</td>
+    </tr>
+  </tbody>
+</table> 
+
+ <!-- **Sorbisch** | -->
+ <!-- --- | -->
+ <!-- `é` → `[ćč]` <br/> `s` → `š` <br/> `[öèéeoͤ]` → `ě` <br/> `[Zz]` → `ž` <br/> `[ftr]` → `ř` <br/> `t` → `ł` | -->
+ 
+ 
 ---
 
 class: part-slide
@@ -228,11 +277,10 @@ class: part-slide
 # Transkription – Annotationsumgebung
 
 - Excel / LibreOffice Calc
-    * verbreitete, etablierte Software
-    * **offline** verwendbar
+    * verbreitete Software (keine Installation oder Schulung nötig)
+    * **offline** verwendbar, keine zentrale Datenhaltung
     * Rechtschreibkontrolle als Unterstützung
     * Symboltabelle für Sonderzeichen
-    * keine zentrale Datenhaltung
 - 1 Tabelle pro Seite mit 1 Zeile pro Textzeile und Spalten für:
     * ID (aus XML)
     * Text (aus OCR)
@@ -246,7 +294,7 @@ class: part-slide
 
 # Transkription – Annotationsumgebung
 
-![screenshot](./img/excel-ocr-gt-annotation.png)
+![screenshot](./img/excel-ocr-gt-annotation_cropped.png)
 
 ---
 
@@ -329,19 +377,19 @@ count: false
 - Umfang (vorläufig):
   * 18 Bearbeiter, ~200 Emails
   * 16 Werke, 10 mit Double-Keying  
-    → ` 6473` Seiten (vollständig)  
-    → `  477` Seiten (vorausgewählt)  
-    → `20808` Zeilen (vorausgewählt)  
-    → `14909` Zeilen (korrigiert)  
-    → `13335` Zeilen (übereinstnd.)
+    → &nbsp;6473 Seiten (vollständig)  
+    → &nbsp;&nbsp;477 Seiten (vorausgewählt)  
+    → 20808 Zeilen (vorausgewählt)  
+    → 14909 Zeilen (korrigiert)  
+    → 13335 Zeilen (übereinstnd.)
     
 ]
 
 .fifty[
   
 - Inter-Annotator-Agreement
-    * 89% Zeilen (DK-Ausbeute)
-    * **99.7%** Zeichen (= 0.3% CER)
+    * 85% Zeilen (DK-Ausbeute)
+    * **99.5%** Zeichen (= 0.5% CER)
 - Genauigkeit Baseline-OCR
     * **97.2%** Zeichen (= 2.8% CER)
     * nur Fraktur
@@ -373,10 +421,10 @@ class: part-slide
   – je Werk
 - Gruppierung der Dateipaare (werkspezifisch vs. generisch)  
   – per Symlinks
-- Modellanpassung (*Finetuning*) vs. grundständiges Training
-- Parameterwahl 
-  – Basismodell, Lernrate und Iterationen
-- <span style="color:gray">Augmentierung (für robustere Modelle) 
+- Trainingsregime  
+  – Modellanpassung (*Finetuning*) vs. grundständiges Training,
+  Parameterwahl (Basismodell, Lernrate, Iterationen)
+- <span style="color:gray">Augmentierung (für robustere Modelle)  
   – Rauschen, Binarisierung, Drehung, Verzerrung</span>
 
 ---
@@ -387,17 +435,53 @@ class: part-slide
 - generisches Finetuning (nur Fraktur)
 - generisches Finetuning (nur Antiqua)
 - generisches Finetuning (alles)
-- grundständiges Training (mit weiteren Daten)
+- <span style="color:gray">grundständiges Training (mit weiteren Daten)</span>
 
 ---
 
 # Training – Ergebnisse
 
-| **Werk** | **CER vorher** | **CER nachher** |
-| --- | --- | --- |
-| `krankenkochbuch` | ?? | ?? |
-| ... | ... | ... |
-| gesamt | ?? | ?? |
+.smaller[
+
+| **Werk** | **Schriftart** | **CER vorher** | **CER nachher** |
+| --- | --- | --- | --- |
+| `ryff1555_krankenkochbuch` | Schwabacher | 3.7% | 0.01% |
+| `koenig1763_cosmogonia` | Antiqua | 5.1% | 0.03% |
+| `wallerius1768_elementa-metallurgiae` | Antiqua | 7.4% | 0.01% |
+| `loskiel1789_geschichtebrüdermission` | Fraktur | 1.7% | 0.04% |
+| `cotta1811_rede-forstlehranstalt` | Antiqua | 1.2% | 0.01% |
+| `arch-hist-sax_1867` | Fraktur | 0.6% | 0.01% |
+| `hansen1874_lichtbrechung` | Antiqua | 9.5% | 0.26% |
+| `gabelentz1879_melanesisch` | Antiqua | 3.3% | 0.07% |
+| `bogusławski1884_nationalgeschichte` | Antiqua | 7.5% | 0.60% |
+| `kopp1886_molecularwelt` | Antiqua | 5.0% | 0.01% |
+| `marshall1888_tiefsee` | Antiqua | 8.5% | 0.27% |
+| … | … | … | … |
+
+]
+
+---
+
+count: false
+
+# Training – Ergebnisse
+
+.smaller[
+
+| **Werk** | **Schriftart** | **CER vorher** | **CER nachher** |
+| --- | --- | --- | --- |
+| … | … | … | … |
+| `schilling1892_journal-gas-wasser` | Antiqua | 0.9% | 0.20% |
+| `arch-hist-sax_1910` | Antiqua | 1.8% | 0.01% |
+| `katalogkunstgewerbeausstellung_1906` | Antiqua | 1.4% | 0.20% |
+| `hottenroth1925_jugenderinnerungen` | Fraktur | 0.6% | 0.01% |
+| `schmidt1936_thueringische-studien` | Fraktur | 0.6% | 0.02% |
+|  |  |  |  |
+| generisch | Antiqua | 3.8% | 1.00% |
+| generisch | Fraktur | 1.2% | 0.03% |
+| generisch | alles | 2.8% | 0.10% |
+
+]
 
 ---
 
@@ -409,14 +493,15 @@ class: part-slide
 
 # Zusammenfassung
 
-- vielversprechende Ergebnisse sowohl bei **Annotation** als auch **Training**
+- vielversprechende Ergebnisse 
+    * sowohl bei **Transkription** als auch **Training**
 - Erkenntnisse
     * gutes **Datenmanagement** nötig
     * eindeutige **Transkriptionsrichtlinien** erforderlich
     * kontinuierliche **Versorgung** mit neuen Werken wichtig
 - Perspektiven
     * **systematische Experimente** zum OCR-Training
-        + Spannungfeld **Generik** vs. **Spezifik**
+        + Spannungfeld **generische** vs. **spezifische** Modelle
     * Einbindung **bürgerwissenschaftlicher Kontexte** in die Datenproduktion
     * Übertrag der Erkenntnisse auf die Erkennung **handschriftlicher Materialien**
 
