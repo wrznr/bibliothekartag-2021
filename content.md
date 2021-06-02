@@ -212,19 +212,49 @@ class: part-slide
 
 # Datenvorbereitung – Ergebnisse
 
-* typische Defizite sichtbar
+* typische Defizite sichtbar:
 
-| **Antiqua** | **Fraktur** |
-| --- | --- |
-| `[fl{]` → `ſ` <br/> Ligaturen <br/> `.` ←→ `,` <br/> `[A-Z]` → `[a-z]` | `[fl]` → `ſ` <br/> `äöü` → `aͤoͤuͤ` <br/> `[-=:–]` → `⸗` <br/> `BSC1` → `VFTI` |
-| ![Beispielbild Cosmogonia](./img/cosmogonia_FILE_0013_GT_region0002_region0002_line0002.bin.png) | ![Beispielbild Hottenroth](./img/hottenroth_jugenderinnerungen_FILE_0010_GT_region0002_region0002_line0016.bin.png) |
-| gedachten Kette mitgetheilte<u> </u>, er<u>f</u>te Ausflus des ele<u>&</u>tri<u>f</u>chen | Stiege gelangen konnte. Hier war aus Brettern ein <u>S</u>u<u>f-</u> |
-| ![Beispielbild Kopp](./img/kopp_molecularwelt_FILE_0015_GT_region0000_region0000_line0021.bin.png) | ![Beispielbild Loskiel](./img/loskiel_FILE_0007_GT_Page1_Block3_Page1_Block3_line0003.bin.png) |
-| be<u>ff</u>ere Bezeichnung <u>ZU</u> <u>f</u>uchen, welche dem von uns <u>J</u>etzt | Br<u>ü</u>der<u> - </u>Unit<u>ä</u>t iſt die unter die Indianer in |
-| ![Beispielbild Marshall](./img/marshall_tiefsee_FILE_0013_GT_region0006_region0006_line0005.bin.png) | ![Beispielbild Ryff](./img/ryff_krankenkochbuch_FILE_0016_GT_Page1_Block3_Page1_Block3_line0012.bin.png) |
-| Strömungen, <u>CS</u> atmet mit <u>f</u>einer <u>3</u>randung und mit dem Spiel <u>f</u>einer | <u>S</u>altun<u>gi</u>n <u>p</u>eſtilentziſchem luff<u>e</u>. 212 |
-| ![Beispielbild Wallerius](./img/wallerius_elementa-metallurgiae_FILE_0014_GT_region0002_region0002_line0011.bin.png) | ![Beispielbild Thüringische](./img/thüringische-studien_FILE_0011_GT_region0003_region0003_line0014.bin.png) |
-| p<u>ufl</u>ula<u>v</u>e qu<u>afl</u>um<u>.</u> metallicum innocentia, bone- | endlich in den Neubau der Landes<u>-</u>(je<u>ß</u>t Staats<u>-</u>)Bank gebracht und nun |
+<table>
+  <thead><tr><th><strong>Antiqua</strong></th><th><strong>Fraktur</strong></th></tr></thead>
+  <tbody style="font-size:0.7em">
+    <tr>
+      <td><center><code class="remark-inline-code">[fl{]</code> → <code class="remark-inline-code">ſ</code> <br> Ligaturen <br> <code class="remark-inline-code">.</code> ←→ <code class="remark-inline-code">,</code> <br> <code class="remark-inline-code">[A-Z]</code> → <code class="remark-inline-code">[a-z]</code></center></td>
+      <td><center><code class="remark-inline-code">[fl]</code> → <code class="remark-inline-code">ſ</code> <br> <code class="remark-inline-code">äöü</code> → <code class="remark-inline-code">aͤoͤuͤ</code> <br> <code class="remark-inline-code">[-=:–]</code> → <code class="remark-inline-code">⸗</code> <br> <code class="remark-inline-code">BSC1</code> → <code class="remark-inline-code">VFTI</code></center></td>
+    </tr>
+    <tr>
+      <td><img src="./img/cosmogonia_FILE_0013_GT_region0002_region0002_line0002.bin.png" alt="Beispielbild Cosmogonia"/></td>
+      <td><img src="./img/hottenroth_jugenderinnerungen_FILE_0010_GT_region0002_region0002_line0016.bin.png" alt="Beispielbild Hottenroth"/></td>
+    </tr>
+    <tr>
+      <td>gedachten Kette mitgetheilte<u> </u>, er<u>f</u>te Ausflus des ele<u>&</u>tri<u>f</u>chen</td>
+      <td>Stiege gelangen konnte. Hier war aus Brettern ein <u>S</u>u<u>f-</u></td>
+    </tr>
+    <tr>
+      <td><img src="./img/kopp_molecularwelt_FILE_0015_GT_region0000_region0000_line0021.bin.png" alt="Beispielbild Kopp"/></td>
+      <td><img src="./img/loskiel_FILE_0007_GT_Page1_Block3_Page1_Block3_line0003.bin.png" alt="Beispielbild Loskiel"/></td>
+    </tr>
+    <tr>
+      <td>be<u>ff</u>ere Bezeichnung <u>ZU</u> <u>f</u>uchen, welche dem von uns <u>J</u>etzt</td>
+      <td>Br<u>ü</u>der<u> - </u>Unit<u>ä</u>t iſt die unter die Indianer in</td>
+    </tr>
+    <tr>
+      <td><img src="./img/marshall_tiefsee_FILE_0013_GT_region0006_region0006_line0005.bin.png" alt="Beispielbild Marshall"/></td>
+      <td><img src="./img/ryff_krankenkochbuch_FILE_0016_GT_Page1_Block3_Page1_Block3_line0012.bin.png" alt="Beispielbild Ryff"/></td>
+    </tr>
+    <tr>
+      <td style="font-size:0.6em">Strömungen, <u>CS</u> atmet mit <u>f</u>einer <u>3</u>randung und mit dem Spiel <u>f</u>einer</td>
+      <td><u>S</u>altun<u>gi</u>n <u>p</u>eſtilentziſchem luff<u>e</u>. 212</td>
+    </tr>
+    <tr>
+      <td><img src="./img/wallerius_elementa-metallurgiae_FILE_0014_GT_region0002_region0002_line0011.bin.png" alt="Beispielbild Wallerius"/></td>
+      <td><img src="./img/thüringische-studien_FILE_0011_GT_region0003_region0003_line0014.bin.png" alt="Beispielbild Thüringische"/></td>
+    </tr>
+    <tr>
+      <td>p<u>ufl</u>ula<u>v</u>e qu<u>afl</u>um<u>.</u> metallicum innocentia, bone-</td>
+      <td>endlich in den Neubau der Landes<u>-</u>(je<u>ß</u>t Staats<u>-</u>)Bank gebracht und nun</td>
+    </tr>
+  </tbody>
+</table> 
 
  <!-- **Sorbisch** | -->
  <!-- --- | -->
@@ -347,11 +377,11 @@ count: false
 - Umfang (vorläufig):
   * 18 Bearbeiter, ~200 Emails
   * 16 Werke, 10 mit Double-Keying  
-    → ` 6473` Seiten (vollständig)  
-    → `  477` Seiten (vorausgewählt)  
-    → `20808` Zeilen (vorausgewählt)  
-    → `14909` Zeilen (korrigiert)  
-    → `13335` Zeilen (übereinstnd.)
+    → <span> 6473</span> Seiten (vollständig)  
+    → <span>  477</span> Seiten (vorausgewählt)  
+    → <span>20808</span> Zeilen (vorausgewählt)  
+    → <span>14909</span> Zeilen (korrigiert)  
+    → <span>13335</span> Zeilen (übereinstnd.)
     
 ]
 
@@ -415,22 +445,38 @@ class: part-slide
 
 | **Werk** | **Schriftart** | **CER vorher** | **CER nachher** |
 | --- | --- | --- | --- |
-| `ryff_krankenkochbuch_1555` | Schwabacher | 3.7% | 0.01% |
-| `koenig_cosmogonia_1763` | Antiqua | 5.1% | 0.03% |
-| `wallerius_elementa-metallurgiae_1768` | Antiqua | 7.4% | 0.01% |
-| `loskiel_geschichte-brüdermission_1789` | Fraktur | 1.7% | 0.04% |
-| `cotta_rede-forstlehranstalt_1811` | Antiqua | 1.2% | 0.01% |
+| `ryff1555_krankenkochbuch` | Schwabacher | 3.7% | 0.01% |
+| `koenig1763_cosmogonia` | Antiqua | 5.1% | 0.03% |
+| `wallerius1768_elementa-metallurgiae` | Antiqua | 7.4% | 0.01% |
+| `loskiel1789_geschichtebrüdermission` | Fraktur | 1.7% | 0.04% |
+| `cotta1811_rede-forstlehranstalt` | Antiqua | 1.2% | 0.01% |
 | `arch-hist-sax_1867` | Fraktur | 0.6% | 0.01% |
 | `hansen1874_lichtbrechung` | Antiqua | 9.5% | 0.26% |
-| `gabelentz_melanesisch_1879` | Antiqua | 3.3% | 0.07% |
-| `bogusławski_nationalgeschichte_1884` | Antiqua | 7.5% | 0.60% |
+| `gabelentz1879_melanesisch` | Antiqua | 3.3% | 0.07% |
+| `bogusławski1884_nationalgeschichte` | Antiqua | 7.5% | 0.60% |
 | `kopp1886_molecularwelt` | Antiqua | 5.0% | 0.01% |
 | `marshall1888_tiefsee` | Antiqua | 8.5% | 0.27% |
-| `schilling-journal_gas-wasser_1892` | Antiqua | 0.9% | 0.20% |
+| `schilling1892_journal-gas-wasser` | Antiqua | 0.9% | 0.20% |
 | `arch-hist-sax_1910` | Antiqua | 1.8% | 0.01% |
-| `katalog-kunstgewerbeausstellung_1906` | Antiqua | 1.4% | 0.20% |
+| … | … | … | … |
+
+]
+
+---
+
+count: false
+
+# Training – Ergebnisse
+
+.smaller[
+
+| **Werk** | **Schriftart** | **CER vorher** | **CER nachher** |
+| --- | --- | --- | --- |
+| … | … | … | … |
+| `katalogkunstgewerbeausstellung_1906` | Antiqua | 1.4% | 0.20% |
 | `hottenroth1925_jugenderinnerungen` | Fraktur | 0.6% | 0.01% |
 | `schmidt1936_thueringische-studien` | Fraktur | 0.6% | 0.02% |
+|  |  |  |  |
 | generisch | Antiqua | 3.8% | 1.00% |
 | generisch | Fraktur | 1.2% | 0.03% |
 | generisch | alles | 2.8% | 0.10% |
