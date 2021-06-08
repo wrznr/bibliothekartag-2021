@@ -55,74 +55,35 @@ count: false
 
 ---
 
-# Vielen Dank für Ihre Beteiligung!
-
-![danke](./img/danke.png)
-
----
-
 class: part-slide
 
 # Einleitung
 
 ---
 
-# Einleitung – Prinzipien OCR
+# Einleitung
 
-- Schritt 1: Zeilenerkennung
-    + **regelbasierte** (Bildmorphologie) oder
-    + **datengetriebene** Verfahren (e.g. Pixelklassifikation)
-
-<center>
-<img src="img/nbg_region.png" width="400px" />
-</center>
-<center>
-<p>↓</p>
-</center>
-<center>
-<img src="img/nbg_lines.png" width="400px" />
-</center>
+Was machen wir eigentlich?
 
 ---
 
 # Einleitung – Prinzipien OCR
 
-- Schritt 2: Vektorisierung
+.cols[
+.fourty[
+- Erkennung auf Zeilenebene
     + **Skalierung** auf einheitliche Höhe
     + **Unterteilung** in 1pixel-breite Streifen
-
-<center>
-<img src="img/nbg_lines.png" width="400px" />
-</center>
-<center>
-<p>↓</p>
-</center>
-<center>
-<img src="img/nbg_grid.png" width="400px" />
-</center>
-
----
-
-# Einleitung – Prinzipien OCR
-
-- Schritt 3: Textermittlung
+- Ausgabe der Zeichen mit höchster Wahrscheinlichkeit
     + **Übergangswahrscheinlichkeiten** zwischen Vektoren
     + Rückgriff auf (offline) trainiertes **Modell**
-
-<center>
-<img src="img/nbg_grid.png" width="400px" />
-</center>
-<center>
-<p>↓</p>
-</center>
-<center>
-<p style="display: inline-block; text-align: left; font-size: 16pt.; font-style: italic;">
-oberwähntem Tage mancher sorgliche Gedanke auf,<br/>
-&amp; wir seufzten öfters zum Heiland, daß Er uns<br/>
-vor allem Schaden, der uns etwa in der folgen-<br/>
-den Nacht begegnen könnte, in Gnaden bewahren
+]
+.sixty[
+<p style="margin-top:-20px">
+<img src="https://files.gitter.im/5b97ae51d73408ce4fa7b1ee/LYSx/lstm-fraktur-arrows.png" width="650px" style="transform:rotate(90deg);"/>
 </p>
-</center>
+]
+]
 
 ---
 
@@ -139,25 +100,6 @@ den Nacht begegnen könnte, in Gnaden bewahren
     * Fibeln 19. Jahrhundert ([Weil et al. 2020](https://github.com/UB-Mannheim/Fibeln))
     * NewsEye Austrian Newspapers 19th C. ([Mühlberger und Hackl 2019](https://zenodo.org/record/3387369#.YLY43nVfjCM))
 - **zusätzliche Trainingsdaten nötig**
-
----
-
-# Einleitung – Arbeitsablauf
-
-0. Werkauswahl (manuell)
-1. OCR-Workflow (manuell optimiert je Werk)
-2. Extraktion von .xslx-Dateien
-   - 1 Datei pro Seite
-   - 1 Zeile pro Textzeile
-4. Transkription (manuelle Textkorrektur)
-   - Verteilung an je 2 Bearbeiter
-5. Import des Rücklaufs
-   - Textnormalisierung (automatische Nachkorrektur; optional)
-   - Double-Keying (automatische Qualitätskontrolle)
-   - Konfliktbereinigung (manuelle Nachkorrektur; optional)
-6. Export als Trainingsdaten
-   - Publikation auf [Github](https://github.com/slub/slub_ocr_gt)
-7. Training und Experimente
 
 ---
 
@@ -178,7 +120,7 @@ class: part-slide
     * erstaunliche Vielfalt von Schriftarten
     * historische Zeichen und Diakritika
     * Latein <!-- "lat" ohne ſ und hist. Abk.zeichen und Ligaturen unbrauchbar -->
-        + hoher Anteil im Datenbestand <!-- 3 Werke von 20! -->
+        + hoher Anteil im Druckbestand
         + immer in Antiqua gesetzt
 - Fraktur 20. Jahrhundert
     * teilweise große Abweichungen zur „Standardfraktur“
@@ -491,7 +433,26 @@ class: part-slide
 
 ---
 
-# Zusammenfassung
+# Zusammenfassung – Arbeitsablauf
+
+0. Werkauswahl (manuell)
+1. OCR-Workflow (manuell optimiert je Werk)
+2. Extraktion von .xslx-Dateien
+   - 1 Datei pro Seite
+   - 1 Zeile pro Textzeile
+4. Transkription (manuelle Textkorrektur)
+   - Verteilung an je 2 Bearbeiter
+5. Import des Rücklaufs
+   - Textnormalisierung (automatische Nachkorrektur; optional)
+   - Double-Keying (automatische Qualitätskontrolle)
+   - Konfliktbereinigung (manuelle Nachkorrektur; optional)
+6. Export als Trainingsdaten
+   - Publikation auf [Github](https://github.com/slub/slub_ocr_gt)
+7. Training und Experimente
+
+---
+
+# Zusammenfassung – Ergebnisse
 
 - vielversprechende Ergebnisse 
     * sowohl bei **Transkription** als auch **Training**
@@ -507,9 +468,9 @@ class: part-slide
 
 ---
 
-class: part-slide
-
 # Vielen Dank für Ihre Aufmerksamkeit!
+
+<img src="img/danke.png" width="400px" />
 
 .center[
 [wrznr.github.io/bibliothekartag-2021](https://wrznr.github.io/bibliothekartag-2021)
