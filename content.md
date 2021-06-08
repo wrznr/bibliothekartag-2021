@@ -387,17 +387,17 @@ class: part-slide
 
 | **Werk** | **Schriftart** | **CER vorher** | **CER nachher** |
 | --- | --- | --- | --- |
-| `ryff1555_krankenkochbuch` | Schwabacher | 3.7% | 0.01% |
-| `koenig1763_cosmogonia` | Antiqua | 5.1% | 0.03% |
-| `wallerius1768_elementa-metallurgiae` | Antiqua | 7.4% | 0.01% |
-| `loskiel1789_geschichtebrüdermission` | Fraktur | 1.7% | 0.04% |
-| `cotta1811_rede-forstlehranstalt` | Antiqua | 1.2% | 0.01% |
-| `arch-hist-sax_1867` | Fraktur | 0.6% | 0.01% |
-| `hansen1874_lichtbrechung` | Antiqua | 9.5% | 0.26% |
-| `gabelentz1879_melanesisch` | Antiqua | 3.3% | 0.07% |
-| `bogusławski1884_nationalgeschichte` | Antiqua | 7.5% | 0.60% |
-| `kopp1886_molecularwelt` | Antiqua | 5.0% | 0.01% |
-| `marshall1888_tiefsee` | Antiqua | 8.5% | 0.27% |
+| `ryff1555_krankenkochbuch` | Schwabacher | 3.8% | 2.1% |
+| `koenig1763_cosmogonia` | Antiqua | 5.1% | 1.7% |
+| `wallerius1768_elementa-metallurgiae` | Antiqua | 7.4% | 3.5% |
+| `loskiel1789_geschichtebrüdermission` | Fraktur | 1.7% | 1.2% |
+| `cotta1811_rede-forstlehranstalt` | Antiqua | 1.2% | 1.3% |
+| `arch-hist-sax_1867` | Fraktur | 0.6% | 0.1% |
+| `hansen1874_lichtbrechung` | Antiqua | 9.5% | 2.9% |
+| `gabelentz1879_melanesisch` | Antiqua | 3.4% | 2.2% |
+| `bogusławski1884_nationalgeschichte` | Antiqua | 7.5% | 2.0% |
+| `kopp1886_molecularwelt` | Antiqua | 5.0% | 2.0% |
+| `marshall1888_tiefsee` | Antiqua | 8.5% | 2.9% |
 | … | … | … | … |
 
 ]
@@ -413,15 +413,15 @@ count: false
 | **Werk** | **Schriftart** | **CER vorher** | **CER nachher** |
 | --- | --- | --- | --- |
 | … | … | … | … |
-| `schilling1892_journal-gas-wasser` | Antiqua | 0.9% | 0.20% |
-| `arch-hist-sax_1910` | Antiqua | 1.8% | 0.01% |
-| `katalogkunstgewerbeausstellung_1906` | Antiqua | 1.4% | 0.20% |
-| `hottenroth1925_jugenderinnerungen` | Fraktur | 0.6% | 0.01% |
-| `schmidt1936_thueringische-studien` | Fraktur | 0.6% | 0.02% |
+| `schilling1892_journal-gas-wasser` | Antiqua | 0.9% | 1.4% |
+| `arch-hist-sax_1910` | Antiqua | 1.8% | 0.4% |
+| `katalogkunstgewerbeausstellung_1906` | Antiqua | 1.5% | 3.5% |
+| `hottenroth1925_jugenderinnerungen` | Fraktur | 0.6% | 0.1% |
+| `schmidt1936_thueringische-studien` | Fraktur | 0.6% | 0.6% |
 |  |  |  |  |
-| generisch | Antiqua | 3.8% | 1.00% |
-| generisch | Fraktur | 1.2% | 0.03% |
-| generisch | alles | 2.8% | 0.10% |
+| generisch | Antiqua | 3.8% | 2.1% |
+| generisch | Fraktur | 1.2% | 0.7% |
+| generisch | alles | 2.8% | 1.6% |
 
 ]
 
