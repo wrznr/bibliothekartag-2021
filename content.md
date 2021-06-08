@@ -119,9 +119,8 @@ class: part-slide
     * bisher wenig beachtet
     * erstaunliche Vielfalt von Schriftarten
     * historische Zeichen und Diakritika
-    * Latein <!-- "lat" ohne ſ und hist. Abk.zeichen und Ligaturen unbrauchbar -->
-        + hoher Anteil im Druckbestand
-        + immer in Antiqua gesetzt
+    * frühneuzeitliches Latein <!-- "lat" ohne ſ und hist. Abk.zeichen und Ligaturen unbrauchbar -->
+        + hoher Anteil im Bestand
 - Fraktur 20. Jahrhundert
     * teilweise große Abweichungen zur „Standardfraktur“
     * Festschriften und Schmuckdrucke
@@ -215,6 +214,18 @@ class: part-slide
 - Ergebnisse
 
 ---
+
+# Transkription – Annotationsumgebung
+
+- Excel / LibreOffice Calc
+    * verbreitete Software (keine Installation oder Schulung nötig)
+    * **offline** verwendbar, keine zentrale Datenhaltung
+    * Rechtschreibkontrolle als Unterstützung
+    * Symboltabelle für Sonderzeichen
+
+---
+
+count: false
 
 # Transkription – Annotationsumgebung
 
@@ -454,23 +465,33 @@ class: part-slide
 
 # Zusammenfassung – Ergebnisse
 
+- Verwendung des **flexiblen OCR-D-Ökosystems**
+- niedrigschwellige Transkriptionsumgebung
 - vielversprechende Ergebnisse 
     * sowohl bei **Transkription** als auch **Training**
-- Erkenntnisse
-    * gutes **Datenmanagement** nötig
-    * eindeutige **Transkriptionsrichtlinien** erforderlich
-    * kontinuierliche **Versorgung** mit neuen Werken wichtig
-- Perspektiven
-    * **systematische Experimente** zum OCR-Training
-        + Spannungfeld **generische** vs. **spezifische** Modelle
-    * Einbindung **bürgerwissenschaftlicher Kontexte** in die Datenproduktion
-    * Übertrag der Erkenntnisse auf die Erkennung **handschriftlicher Materialien**
+- gutes **Datenmanagement** mit Versionierung nötig
+- eindeutige **Transkriptionsrichtlinien** erforderlich
+- freie und offene Veröffentlichung der **Daten und Methoden**
+
+---
+
+# Zusammenfassung – Perspektiven
+
+
+- **systematische Experimente** zum OCR-Training
+    + Spannungsfeld **generische** vs. **spezifische** Modelle
+    + Robustheit durch variable **Bildvorverarbeitung** und **Augmentierung**
+- **Gemeinschaftsaufgabe**: Lückenschluss im Bereich OCR-Trainingsdaten
+    + ggf. unter Einbindung **bürgerwissenschaftlicher Kontexte** in die Datenproduktion
+- Übertrag der Erkenntnisse auf die Erkennung **handschriftlicher Materialien**
 
 ---
 
 # Vielen Dank für Ihre Aufmerksamkeit!
 
-<img src="img/danke.png" width="400px" />
+<center>
+<img src="img/danke.png" width="500px" />
+</center>
 
 .center[
 [wrznr.github.io/bibliothekartag-2021](https://wrznr.github.io/bibliothekartag-2021)
