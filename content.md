@@ -73,10 +73,10 @@ Was machen wir eigentlich?
 .fourty[
 - Erkennung auf Zeilenebene
     + **Skalierung** auf einheitliche Höhe
-    + **Unterteilung** in 1pixel-breite Streifen
+    + **Unterteilung** in 1-Pixel-breite Streifen
 - Ausgabe der Zeichen mit höchster Wahrscheinlichkeit
     + **Übergangswahrscheinlichkeiten** zwischen Vektoren
-    + Rückgriff auf (offline) trainiertes **Modell**
+    + Rückgriff auf vorab trainiertes **Modell**
 ]
 .sixty[
 <p style="margin-top:-20px">
@@ -89,8 +89,7 @@ Was machen wir eigentlich?
 
 # Einleitung – Motivation
 
-- resultierende Textqualität (auch) abhängig von Modellpassung
-    * Modell: Wahrscheinlichkeitsverteilung über alle Zeichen
+- resultierende Textqualität stark abhängig von Modellpassung
 - mitgelieferte Modelle häufig ungeeignet für historische Vorlagen
     * unzureichende Passung zwischen Trainings- und Anwendungsdaten
     * synthetisches Training
@@ -119,14 +118,14 @@ class: part-slide
     * bisher wenig beachtet
     * erstaunliche Vielfalt von Schriftarten
     * historische Zeichen und Diakritika
-    * frühneuzeitliches Latein <!-- "lat" ohne ſ und hist. Abk.zeichen und Ligaturen unbrauchbar -->
+    * bes. frühneuzeitliches Latein <!-- "lat" ohne ſ und hist. Abk.zeichen und Ligaturen unbrauchbar -->
         + hoher Anteil im Bestand
 - Fraktur 20. Jahrhundert
     * teilweise große Abweichungen zur „Standardfraktur“
     * Festschriften und Schmuckdrucke
 - Sorbisch (vgl. [Würzner und Böhmak 2019](https://zenodo.org/record/3387369#.YLY43nVfjCM))
-    * zahlreiche (polnische, tschechische und deutsche) Diakritika sowie `ß`
-    * **keine** annähernd adäquaten Modelle vorhanden
+    * zahlreiche (poln., tschech. und dt.) Diakritika sowie `ß`
+    * noch keine Modelle
 
 ---
 
@@ -257,6 +256,7 @@ count: false
   * bester Kompromiss aus Aufwand und Genauigkeit
   * häufige Eingabe von Sonderzeichen (`ſ ꝛ aͤ oͤ uͤ  — ⸗` …)
   * in der Praxis auftretende Grenzfälle bzw. Lücken
+  * noch keine Formalisierung / Implementierung
 
 ---
 
@@ -328,8 +328,8 @@ count: false
 .fifty[
      
 - Umfang (vorläufig):
-  * 18 Bearbeitende, ~200 Emails
-  * 16 Werke, 10 mit Double-Keying  
+  * 18 Bearbeitende, &gt;200 Emails
+  * 16 Werke, 10 mit **Double-Keying**  
     → &nbsp;6473 Seiten (vollständig)  
     → &nbsp;&nbsp;477 Seiten (vorausgewählt)  
     → 20808 Zeilen (vorausgewählt)  
@@ -362,6 +362,7 @@ class: part-slide
 # Training
 
 - Vorgehen
+- Experimente
 - Ergebnisse
 
 ---
@@ -377,8 +378,8 @@ class: part-slide
 - Trainingsregime  
   – Modellanpassung (*Finetuning*) vs. grundständiges Training,
   Parameterwahl (Basismodell, Lernrate, Iterationen)
-- <span style="color:gray">Augmentierung (für robustere Modelle)  
-  – Rauschen, Binarisierung, Drehung, Verzerrung</span>
+- Evaluierung  
+  – CER (quantitativ), Konfusion/Muster (qualitativ)
 
 ---
 
@@ -389,6 +390,8 @@ class: part-slide
 - generisches Finetuning (nur Antiqua)
 - generisches Finetuning (alles)
 - <span style="color:gray">grundständiges Training (mit weiteren Daten)</span>
+- <span style="color:gray">Augmentierung (für robustere Modelle)  
+  – Rauschen, Binarisierung, Drehung, Verzerrung</span>
 
 ---
 
@@ -441,6 +444,10 @@ count: false
 class: part-slide
 
 # Zusammenfassung
+
+- Arbeitsablauf
+- Ergebnisse
+- Perspektiven
 
 ---
 
