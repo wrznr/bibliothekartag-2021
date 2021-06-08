@@ -61,9 +61,16 @@ class: part-slide
 
 ---
 
-# Einleitung
+# Einleitung – auf einen Blick
 
-Was machen wir eigentlich?
+- Erstellung von Trainingsmaterialien für OCR
+    * Zeilenebene
+    * Korrektur automatisch erkannter Bilder
+    * Double-Keying-Prinzip
+- Auswertung der Datenerhebung
+    * Inter-Annotator-Agreement
+- Training von OCR-Modellen
+    * Evaluation werkspezifisch und generisch
 
 ---
 
