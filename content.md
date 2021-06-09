@@ -439,7 +439,9 @@ count: false
 
 ]
 
-> NB: CER-Berechnung mit [eigenem Werkzeug](https://github.com/ASVLeipzig/cor-asv-ann/blob/master/ocrd_cor_asv_ann/scripts/compare.py) auf Testdaten, da Tesseract nur [BCER auf Trainingsdaten](https://github.com/tesseract-ocr/tesstrain/issues/261) misst (also auch für Modellselektion ungeeignet – Fehler im Trainingsregime)!
+> NB: CER-Berechnung mit [eigenem Werkzeug](https://github.com/ASVLeipzig/cor-asv-ann/blob/master/ocrd_cor_asv_ann/scripts/compare.py) auf Testdaten,  
+denn Tesseract misst nur [BCER auf Trainingsdaten](https://github.com/tesseract-ocr/tesstrain/issues/261)  
+(also auch für Modellselektion ungeeignet – Fehler im Trainingsregime)!
 
 ---
 
