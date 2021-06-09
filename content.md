@@ -79,11 +79,11 @@ class: part-slide
 .cols[
 .fourty[
 - Erkennung auf Zeilenebene
-    + **Skalierung** auf einheitliche Höhe
-    + **Unterteilung** in 1-Pixel-breite Streifen
+    + Skalierung auf einheitliche Höhe
+    + Unterteilung in 1-Pixel-breite Streifen
 - Ausgabe der Zeichen mit höchster Wahrscheinlichkeit
-    + **Übergangswahrscheinlichkeiten** zwischen Vektoren
-    + Rückgriff auf vorab trainiertes **Modell**
+    + Übergangswahrscheinlichkeiten zwischen Vektoren
+    + Rückgriff auf **vorab trainiertes Modell**
 ]
 .sixty[
 <p style="margin-top:-20px">
@@ -378,13 +378,13 @@ class: part-slide
 
 - Modelle für Tesseract  
   – mit [tesstrain](https://github.com/tesseract-ocr/tesstrain)
-- randomisierte 10%-Aufteilung (Test- und Trainingsdaten)  
+- randomisierte 10%-Aufteilung (Test- vs. Trainingsdaten)  
   – je Werk
 - Gruppierung der Dateipaare (werkspezifisch vs. generisch)  
   – per Symlinks
 - Trainingsregime  
-  – Modellanpassung (*Finetuning*) vs. grundständiges Training,
-  Parameterwahl (Basismodell, Lernrate, Iterationen)
+  – Modellanpassung (*Finetuning*) vs. grundständiges Training  
+  – Parameterwahl (Basismodell, Lernrate, Iterationen)
 - Evaluierung  
   – CER (quantitativ), Konfusion/Muster (qualitativ)
 
