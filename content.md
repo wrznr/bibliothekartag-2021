@@ -224,7 +224,7 @@ class: part-slide
 # Transkription – Annotationsumgebung
 
 - Excel / LibreOffice Calc
-    * verbreitete Software (keine Installation oder Schulung nötig)
+    * verbreitete Software (keine Installation oder Einarbeitung nötig)
     * **offline** verwendbar, keine zentrale Datenhaltung
     * Rechtschreibkontrolle als Unterstützung
     * Symboltabelle für Sonderzeichen
@@ -236,7 +236,7 @@ count: false
 # Transkription – Annotationsumgebung
 
 - Excel / LibreOffice Calc
-    * verbreitete Software (keine Installation oder Schulung nötig)
+    * verbreitete Software (keine Installation oder Einarbeitung nötig)
     * **offline** verwendbar, keine zentrale Datenhaltung
     * Rechtschreibkontrolle als Unterstützung
     * Symboltabelle für Sonderzeichen
@@ -263,6 +263,7 @@ count: false
   * bester Kompromiss aus Aufwand und Genauigkeit
   * häufige Eingabe von Sonderzeichen (`ſ ꝛ aͤ oͤ uͤ  — ⸗` …)
   * in der Praxis auftretende Grenzfälle bzw. Lücken
+  * Schulung, Betreuung und Vernetzung wichtig
   * noch keine Formalisierung / Implementierung
 
 ---
@@ -275,7 +276,8 @@ count: false
   * bester Kompromiss aus Aufwand und Genauigkeit
   * häufige Eingabe von Sonderzeichen (`ſ ꝛ aͤ oͤ uͤ  — ⸗` …)
   * in der Praxis auftretende Grenzfälle bzw. Lücken
-
+  * Schulung, Betreuung und Vernetzung wichtig
+  
 <center>
 <img src="img/kollaborative-annotation-kommentar4.png" width="650px" />
 </center>
@@ -290,6 +292,7 @@ count: false
   * bester Kompromiss aus Aufwand und Genauigkeit
   * häufige Eingabe von Sonderzeichen (`ſ ꝛ aͤ oͤ uͤ  — ⸗` …)
   * in der Praxis auftretende Grenzfälle bzw. Lücken
+  * Schulung, Betreuung und Vernetzung wichtig
 
 <center>
 <img src="img/kollaborative-annotation-kommentar2.png" width="400px" />
@@ -305,6 +308,7 @@ count: false
   * bester Kompromiss aus Aufwand und Genauigkeit
   * häufige Eingabe von Sonderzeichen (`ſ ꝛ aͤ oͤ uͤ  — ⸗` …)
   * in der Praxis auftretende Grenzfälle bzw. Lücken
+  * Schulung, Betreuung und Vernetzung wichtig
 
 <center>
 <img src="img/kollaborative-annotation-kommentar5.png" width="500px" />
@@ -485,10 +489,11 @@ class: part-slide
 
 - Verwendung des **flexiblen OCR-D-Ökosystems**
 - niedrigschwellige Transkriptionsumgebung
+- eindeutige **Transkriptionsrichtlinien** erforderlich
+- partizipative, kooperative Betreuung
 - vielversprechende Ergebnisse 
     * sowohl bei **Transkription** als auch **Training**
 - gutes **Datenmanagement** mit Versionierung nötig
-- eindeutige **Transkriptionsrichtlinien** erforderlich
 - freie und offene Veröffentlichung der **Daten und Methoden**
 
 ---
