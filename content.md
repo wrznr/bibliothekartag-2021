@@ -518,5 +518,4 @@ class: part-slide
 
 .center[
 [wrznr.github.io/bibliothekartag-2021](https://wrznr.github.io/bibliothekartag-2021)
-[github.com/slub/slub_ocr_gt](https://github.com/slub/slub_ocr_gt)
 ]
